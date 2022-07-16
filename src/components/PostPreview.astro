@@ -1,35 +1,35 @@
 ---
 // TODO: Type it
 export interface Props {
-	post: any;
+  post: any;
 }
 
 const { post } = Astro.props;
 ---
 
 <section>
-	<h2><a href={post.url}>{post.frontmatter.title}</a></h2>
-	<span>{post.frontmatter.publishDate}</span>
+  <h2><a href={post.url}>{post.frontmatter.title}</a></h2>
+  <span>{post.frontmatter.publishDate}</span>
 </section>
 
 <style>
-	section {
-		display: flex;
-		justify-content: space-between;
-	}
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	section span {
-		color: var(--theme-sub-text);
-		white-space: nowrap;
-	}
+  section span {
+    color: var(--theme-sub-text);
+    white-space: nowrap;
+  }
 
-	section h2 {
-		margin: 0 1em 0 0;
-		font-size: 1em;
-		color: var(--theme-link);
-	}
+  section h2 {
+    margin: 0 1em 0 0;
+    font-size: 1em;
+    color: var(--theme-link);
+  }
 
-	section h2:hover {
-		color: var(--theme-link-hover);
-	}
+  section h2:hover {
+    color: var(--theme-link-hover);
+  }
 </style>

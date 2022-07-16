@@ -8,29 +8,29 @@ const title = 'Vlad Esafev';
 const description = 'T-shaped engineering for life';
 const permalink = 'https://esafev.com';
 
-const allPosts = 
-	(await Astro.glob('./posts/*.md'))
-		.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
-		.filter(a => !a.frontmatter.publshed);
+const allPosts =
+  (await Astro.glob('./posts/*.md'))
+   .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
+   .filter(a => !a.frontmatter.publshed);
 
 ---
 
 <html lang="en">
-	<head>
-		<Head {title} {description} {permalink} />
-	</head>
+  <head>
+    <Head {title} {description} {permalink} />
+  </head>
 
-	<body>
-		<Header />
-		<main>
-			{allPosts.map((p) => <PostPreview post={p} />)}
-		</main>
-		<Footer />
-	</body>
+  <body>
+    <Header />
+      <main>
+        {allPosts.map((p) => <PostPreview post={p} />)}
+      </main>
+      <Footer />
+  </body>
 </html>
 
 <style>
-	main {
-		margin: 3em 0;
-	}
+  main {
+    margin: 3em 0;
+  }
 </style>

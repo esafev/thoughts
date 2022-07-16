@@ -6,20 +6,20 @@
 }
 
 @font-face {
-	font-family: 'IBM Plex Mono';
-	src: url('../../fonts/IBMPlexMono-SemiBold.woff2') format('woff2');
-	font-weight: 700;
-	font-display: fallback;
+  font-family: 'IBM Plex Mono';
+  src: url('../../fonts/IBMPlexMono-SemiBold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: fallback;
 }
 
 :root {
-	--color-gray: #7C7C7A;
-	--color-gray-medium: #E1E1E0;
-	--color-gray-light: #f9f7f4;
-	--color-black-light: #1F1F1F;
-	--color-red: #E77728;
-	--color-white: #fff;
-	--color-white-light: #CCCCCC;
+  --color-gray: #7C7C7A;
+  --color-gray-medium: #E1E1E0;
+  --color-gray-light: #f9f7f4;
+  --color-black-light: #1F1F1F;
+  --color-red: #E77728;
+  --color-white: #fff;
+  --color-white-light: #CCCCCC;
 }
 
 :root {

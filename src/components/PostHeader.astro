@@ -1,0 +1,28 @@
+---
+export interface Props {
+	title: string;
+	publishDate: string;
+}
+
+const { title, publishDate } = Astro.props;
+---
+
+<section>
+	<h2>{title}</h2>
+	<span>{publishDate}</span>
+</section>
+
+<style>
+	section {
+		margin: 3em 0;
+	}
+
+	section h2 {
+		margin: 1em 0 .5em;
+		font-size: 1.1em;
+	}
+
+	section span {
+		color: var(--theme-sub-text);
+	}
+</style>

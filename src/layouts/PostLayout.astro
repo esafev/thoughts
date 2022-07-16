@@ -1,0 +1,100 @@
+---
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PostHeader from '../components/PostHeader.astro';
+
+
+const { content } = Astro.props;
+const { title, description, publishDate, permalink } = content;
+---
+
+<html lang='en'>
+	<head>
+		<Head {title} {description} {permalink} />
+	</head>
+
+	<body>
+		<Header />
+		<PostHeader {title} {publishDate} />
+		<article>
+			<slot />
+		</article>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	/* TODO: Get rid of global using */
+	article {
+		padding-bottom: 3em;
+	}
+
+	article :global(p, h2, h3) {
+		margin: 1em 0 1em 0;
+	}
+
+	article :global(h2) {
+		font-size: 1.3em;
+	}
+
+	article :global(h3) {
+		font-size: 1.1em;
+	}
+
+	article :global(pre > code) {
+		background-color: inherit;
+	}
+
+	article :global(blockquote) {
+		display: flex;
+		flex-direction: column;
+		padding-left: 1em;
+
+		background: transparent;
+		border-left: 4px solid var(--theme-code-block);
+	}
+
+	article :global(code) {
+		--border-radius: 3px;
+		--padding-block: 0.2rem;
+		--padding-inline: 0.33rem;
+
+		font-size: 0.85em;
+		color: inherit;
+		padding: var(--padding-block) var(--padding-inline);
+		margin: calc(var(--padding-block) * -1) -0.125em;
+		border-radius: var(--border-radius);
+		word-break: break-word;
+
+		background-color: var(--theme-code-block);
+	}
+
+	article :global(pre.astro-code > code) {
+		all: unset;
+	}
+
+	article :global(pre) {
+		position: relative;
+		--padding-block: 1rem;
+		--padding-inline: 2rem;
+		padding: var(--padding-block) var(--padding-inline);
+		padding-right: calc(var(--padding-inline) * 2);
+
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+
+	@media (min-width: 37.75em) {
+		article :global(pre) {
+			--padding-inline: 1.25rem;
+			border-radius: 8px;
+		}
+	}
+
+	article :global(img.cover) {
+		width: 100%;
+		max-height: 50vh;
+		object-fit: cover;
+	}
+</style>

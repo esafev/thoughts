@@ -4,12 +4,22 @@ export interface Props {
   post: any;
 }
 
-const { post } = Astro.props;
+const { 
+  post: { 
+    url,
+    frontmatter: {
+      title,
+      publishDate
+    } 
+  }
+} = Astro.props;
 ---
 
 <section>
-  <h2><a href={post.url}>{post.frontmatter.title}</a></h2>
-  <span>{post.frontmatter.publishDate}</span>
+  <h2>
+    <a href={url}>{title}</a>
+  </h2>
+  <span>{publishDate}</span>
 </section>
 
 <style>

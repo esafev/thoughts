@@ -8,11 +8,10 @@ const title = 'Vlad Esafev';
 const description = 'T-shaped engineering for life';
 const permalink = 'https://esafev.com';
 
-const allPosts =
+const publishedPosts =
   (await Astro.glob('./posts/*.md'))
    .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
    .filter(a => !a.frontmatter.publshed);
-
 ---
 
 <html lang="en">
@@ -22,10 +21,10 @@ const allPosts =
 
   <body>
     <Header />
-      <main>
-        {allPosts.map((p) => <PostPreview post={p} />)}
-      </main>
-      <Footer />
+    <main>
+      {publishedPosts.map((p) => <PostPreview post={p} />)}
+    </main>
+    <Footer />
   </body>
 </html>
 

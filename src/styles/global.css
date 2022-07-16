@@ -1,8 +1,8 @@
 @font-face {
-	font-family: 'IBM Plex Mono';
-	src: url('../../fonts/IBMPlexMono-Regular.woff2') format('woff2');
-	font-weight: 400;
-	font-display: fallback;
+  font-family: 'IBM Plex Mono';
+  src: url('../../fonts/IBMPlexMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: fallback;
 }
 
 @font-face {
@@ -23,73 +23,73 @@
 }
 
 :root {
-	--theme-bg: var(--color-gray-light);
-	--theme-text: var(--color-black-light);
-	--theme-sub-text: var(--color-gray);
-	--theme-link: var(--color-red);
-	--theme-link-hover: var(--color-white);
-	--theme-code-block: var(--color-gray-medium);
+  --theme-bg: var(--color-gray-light);
+  --theme-text: var(--color-black-light);
+  --theme-sub-text: var(--color-gray);
+  --theme-link: var(--color-red);
+  --theme-link-hover: var(--color-white);
+  --theme-code-block: var(--color-gray-medium);
 
-	color-scheme: light dark;
-	color: var(--theme-text);
+  color-scheme: light dark;
+  color: var(--theme-text);
 
-	font-family: 'IBM Plex Mono', monospace;
-	line-height: 1.5em;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.5em;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-	background: var(--theme-bg);
+  background: var(--theme-bg);
 
-	font-size: 13px;
-	max-width: 60em;
-	padding: 7em;
+  font-size: 13px;
+  max-width: 60em;
+  padding: 7em;
 }
 
 @media only screen and (max-width: 480px) {
-	body {
-		max-width: 100%;
-		padding: 1em;
-		font-size: 16px;
-	}
+  body {
+    max-width: 100%;
+    padding: 1em;
+    font-size: 16px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--theme-bg: var(--color-black-light);
-		--theme-text: var(--color-white-light);
-		--theme-code-block: var(--color-gray);
-	}
+  :root {
+    --theme-bg: var(--color-black-light);
+    --theme-text: var(--color-white-light);
+    --theme-code-block: var(--color-gray);
+  }
 }
 
 p, span {
-	font-size: 1em;
-	color: var(--theme-text);
+  font-size: 1em;
+  color: var(--theme-text);
 }
 
 small {
-	font-size: 0.833rem;
+  font-size: 0.833rem;
 }
 
 a {
-	color: var(--theme-link);
-	font-weight: 400;
+  color: var(--theme-link);
+  font-weight: 400;
 }
 
 a:hover {
-	background-color: var(--color-red);
-	color: var(--theme-link-hover);
+  background-color: var(--color-red);
+  color: var(--theme-link-hover);
 
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 hr {
-	background-color: var(--theme-sub-text);
+  background-color: var(--theme-sub-text);
 
-	border-color: transparent;
-	border-bottom: none;
+  border-color: transparent;
+  border-bottom: none;
 }

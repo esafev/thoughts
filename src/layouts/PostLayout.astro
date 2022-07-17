@@ -8,20 +8,22 @@ const {
   content: {
     title,
     description,
-    publishDate,
-    permalink
+    pubDate,
+    slug
   } 
 } = Astro.props;
+
+const link = `${import.meta.env.SITE}/posts/${slug}`;
 ---
 
 <html lang='en'>
   <head>
-    <Head {title} {description} {permalink} />
+    <Head {title} {description} {link} />
   </head>
 
   <body>
     <Header />
-    <PostHeader {title} {publishDate} />
+    <PostHeader {title} {pubDate} />
     <article>
       <slot />
     </article>

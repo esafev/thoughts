@@ -9,7 +9,7 @@ const {
     url,
     frontmatter: {
       title,
-      publishDate
+      pubDate
     } 
   }
 } = Astro.props;
@@ -19,7 +19,7 @@ const {
   <h2>
     <a href={url}>{title}</a>
   </h2>
-  <span>{publishDate}</span>
+  <span>{pubDate}</span>
 </section>
 
 <style>

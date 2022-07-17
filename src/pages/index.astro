@@ -5,18 +5,18 @@ import PostPreview from '../components/PostPreview.astro';
 import Footer from '../components/Footer.astro';
 
 const title = 'Vlad Esafev';
-const description = 'T-shaped engineering for life';
-const permalink = 'https://esafev.com';
+const description = 'Not causing trouble, not touching anything, fixing the primus';
+const link = import.meta.env.SITE;
 
 const publishedPosts =
   (await Astro.glob('./posts/*.md'))
-   .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
+   .sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf())
    .filter(a => !a.frontmatter.publshed);
 ---
 
 <html lang="en">
   <head>
-    <Head {title} {description} {permalink} />
+    <Head {title} {description} {link} />
   </head>
 
   <body>

@@ -9,5 +9,9 @@ export default defineConfig({
   experimental: {
     integrations: true,
   },
-  integrations: [preact(), sitemap(), robotsTxt()]
+  integrations: [
+    preact(), 
+    sitemap(), 
+    robotsTxt()
+  ]
 });

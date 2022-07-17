@@ -8,7 +8,7 @@ const {
   content: {
     title,
     description,
-    publishDate,
+    pubDate,
     permalink
   } 
 } = Astro.props;
@@ -21,7 +21,7 @@ const {
 
   <body>
     <Header />
-    <PostHeader {title} {publishDate} />
+    <PostHeader {title} {pubDate} />
     <article>
       <slot />
     </article>

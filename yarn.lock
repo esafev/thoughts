@@ -73,6 +73,13 @@
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.4.1.tgz#c23224f03497e40f6a993fddde08f436e37ffd6c"
   integrity sha512-JxkrXFiFhfunOFBI2Xxwru9t4IzrLw+nfA7RkNnV8qP65BLidrwWS+NfZhOSVGTrbf+cQfF8QNe6O4gAX8wQHw==
 
+"@astrojs/rss@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-0.2.1.tgz#7439bb3c17a277358ed0af9c3e6f8409e2c74db0"
+  integrity sha512-qGmQU0Biui2cRSCLXtGGaLcF3UfBpq3ijPnasbVee4bB18tAQ5Wk3XwKUH9/+abxU5LjWXkx5LIwBUu72M0DZg==
+  dependencies:
+    fast-xml-parser "^4.0.8"
+
 "@astrojs/sitemap@^0.2.6":
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-0.2.6.tgz#f133976aea7bfba683a161b18ed17c3028560d2e"
@@ -1252,6 +1259,13 @@ fast-xml-parser@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.7.tgz#570a0f3754f259a8e5e7a85e7c667401e15e4872"
   integrity sha512-dMtibyus3kC7nbxj1CpVtysLzO13UOAZEFAb5vpQg3T4O6qvetmSePpXKFx5KPNCHKoGwjtgjfF5DOyn7s1ylQ==
+  dependencies:
+    strnum "^1.0.5"
+
+fast-xml-parser@^4.0.8:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.9.tgz#3a81dab7b4952b8d38f0136d28bd055b80ed6512"
+  integrity sha512-4G8EzDg2Nb1Qurs3f7BpFV4+jpMVsdgLVuG1Uv8O2OHJfVCg7gcA53obuKbmVqzd4Y7YXVBK05oJG7hzGIdyzg==
   dependencies:
     strnum "^1.0.5"
 

@@ -1,5 +1,7 @@
-# Thoughts: Main Page
+# Thoughts
+Tech Stack: Astro + Preact
 
+Dev Mode:
 ```
-yarn dev
+yarn && yarn dev
 ```

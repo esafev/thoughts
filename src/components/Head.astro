@@ -4,10 +4,10 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   description: string;
-  permalink: string;
+  link: string;
 }
 
-const { title, description, permalink } = Astro.props;
+const { title, description, link } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -22,12 +22,12 @@ const { title, description, permalink } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={permalink} />
+<meta property="og:url" content={link} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={permalink} />
+<meta property="twitter:url" content={link} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />

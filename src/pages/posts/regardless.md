@@ -2,10 +2,8 @@
 layout: ../../layouts/PostLayout.astro 
 title: Regardless
 pubDate: 16 Jul 2022
-description: Just a Hello World Post!
-permalink: https://esafev.com/posts/regardless
+description: Just start again
 link: https://esafev.com/posts/regardless
-slug: regardless
 published: true
 ---
 

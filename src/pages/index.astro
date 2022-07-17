@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
-const permalink = 'https://esafev.com';
+const link = import.meta.env.SITE;
 
 const publishedPosts =
   (await Astro.glob('./posts/*.md'))
@@ -16,7 +16,7 @@ const publishedPosts =
 
 <html lang="en">
   <head>
-    <Head {title} {description} {permalink} />
+    <Head {title} {description} {link} />
   </head>
 
   <body>

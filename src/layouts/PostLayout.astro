@@ -9,9 +9,11 @@ const {
     title,
     description,
     pubDate,
-    link
+    slug
   } 
 } = Astro.props;
+
+const link = `${import.meta.env.SITE}/posts/${slug}`;
 ---
 
 <html lang='en'>

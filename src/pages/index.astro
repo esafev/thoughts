@@ -4,14 +4,11 @@ import Header from '../components/Header.astro';
 import PostPreview from '../components/PostPreview.astro';
 import Footer from '../components/Footer.astro';
 
+import { getBlogPosts } from '../utils/posts';
+
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
 const link = import.meta.env.SITE;
-
-const publishedPosts =
-  (await Astro.glob('./posts/*.md'))
-   .sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf())
-   .filter(a => !a.frontmatter.publshed);
 ---
 
 <html lang="en">
@@ -22,7 +19,7 @@ const publishedPosts =
   <body>
     <Header />
     <main>
-      {publishedPosts.map((p) => <PostPreview post={p} />)}
+      {getBlogPosts().map((p) => <PostPreview post={p} />)}
     </main>
     <Footer />
   </body>

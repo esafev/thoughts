@@ -9,6 +9,7 @@ import { getBlogPosts } from '../utils/posts';
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
 const link = import.meta.env.SITE;
+const posts = getBlogPosts();
 ---
 
 <html lang="en">
@@ -19,7 +20,7 @@ const link = import.meta.env.SITE;
   <body>
     <Header />
     <main>
-      {getBlogPosts().map((p) => <PostPreview post={p} />)}
+      {posts.map((p) => <PostPreview post={p} />)}
     </main>
     <Footer />
   </body>

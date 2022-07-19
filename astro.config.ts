@@ -4,7 +4,7 @@ import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
-export default defineConfig({
+const config = {
   site: 'https://esafev.com',
   experimental: {
     integrations: true,
@@ -14,4 +14,6 @@ export default defineConfig({
     sitemap(), 
     robotsTxt()
   ]
-});
+};
+
+export default defineConfig(config);

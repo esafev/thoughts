@@ -9,7 +9,8 @@ const get = () => rss({
   items: getBlogPosts().map((post) => ({
     link: post.frontmatter.slug,
     title: post.frontmatter.title,
-    pubDate: post.frontmatter.pubDate,
+    description: post.frontmatter.description,
+    pubDate: post.frontmatter.pubDate
   }))
 });
 

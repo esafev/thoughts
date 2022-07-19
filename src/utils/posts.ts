@@ -1,3 +1,4 @@
+// TODO: Type it
 const getBlogPosts = () => 
   Object.values(import.meta.globEager('../pages/posts/*.md'))
     .sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf())

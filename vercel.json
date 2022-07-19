@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/*.(woff|woff2)",
+      "source": "/fonts/(.*)",
       "headers" : [
         {
           "key" : "Cache-Control",

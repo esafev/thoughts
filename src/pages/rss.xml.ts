@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
 
-import { getBlogPosts } from '../utils/posts';
+import { getBlogPosts } from '@utils/posts';
 
 const get = () => rss({
   title: 'Vlad Esafev',

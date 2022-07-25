@@ -93,10 +93,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.6.0.tgz#fba82d4aa8e04c076430740c8588e97e87fc8cf5"
   integrity sha512-aHho3xNaJbys8KzkoyWOiwXwYwTBSe/RBflUolxEtHdNi8ibM0K3U20M6/SnamHnk6m78aEHQ4oHWFHI1wYUhw==
 
-"@astrojs/rss@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-0.2.1.tgz#7439bb3c17a277358ed0af9c3e6f8409e2c74db0"
-  integrity sha512-qGmQU0Biui2cRSCLXtGGaLcF3UfBpq3ijPnasbVee4bB18tAQ5Wk3XwKUH9/+abxU5LjWXkx5LIwBUu72M0DZg==
+"@astrojs/rss@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-0.2.2.tgz#bdca1bfb6f80666944ea06ffaef649821345433e"
+  integrity sha512-4LhCTFLGDB7mXjdnbzV+HOx5YTUL8V1ZjNdrQlPBdGXdTVDeNCBACpcL/emiZtDqako91JfxaSnNd9ePAwFzGA==
   dependencies:
     fast-xml-parser "^4.0.8"
 

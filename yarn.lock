@@ -626,14 +626,14 @@ ast-types@0.14.2, ast-types@^0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro-robots-txt@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/astro-robots-txt/-/astro-robots-txt-0.3.6.tgz#314bf9e58d72a3890ed1a1ff48bb3dd2f90dc684"
-  integrity sha512-aM4uV7kcgqrQhmyBbSmOw21YvnduirtqAHmm1oxgJ6wOlYo9JAcW9wZRtfW//JSGKwspCI52YNDCHs01pMTyEQ==
+astro-robots-txt@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/astro-robots-txt/-/astro-robots-txt-0.3.7.tgz#1a107f8bbcc4946f12d05346b17b41475ec6f691"
+  integrity sha512-UWUstLmkVF6zaM8oaYRDqkcvxpa1RLUsJRNXfN2b5azODKEfgICzXRM4MA0a+/oq7lEuk0JPKJbbgwMOeYT1og==
   dependencies:
     deepmerge "^4.2.2"
     valid-filename "^4.0.0"
-    zod "^3.17.3"
+    zod "^3.17.9"
 
 astro@^1.0.0-beta.73:
   version "1.0.0-beta.73"
@@ -3696,10 +3696,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@^3.17.3:
-  version "3.17.3"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.17.3.tgz#86abbc670ff0063a4588d85a4dcc917d6e4af2ba"
-  integrity sha512-4oKP5zvG6GGbMlqBkI5FESOAweldEhSOZ6LI6cG+JzUT7ofj1ZOC0PJudpQOpT1iqOFpYYtX5Pw0+o403y4bcg==
+zod@^3.17.3, zod@^3.17.9:
+  version "3.17.10"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.17.10.tgz#8716a05e6869df6faaa878a44ffe3c79e615defb"
+  integrity sha512-IHXnQYQuOOOL/XgHhgl8YjNxBHi3xX0mVcHmqsvJgcxKkEczPshoWdxqyFwsARpf41E0v9U95WUROqsHHxt0UQ==
 
 zwitch@^2.0.0:
   version "2.0.2"

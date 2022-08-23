@@ -73,10 +73,10 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
-"@astrojs/preact@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-1.0.2.tgz#b1d80a27796c68633072fb8f9351a3ef4dd5ef0d"
-  integrity sha512-hJn1SuclnC15qzsZ1d0PkJGi03B2pCokpWl9+uydYJTtAPVqA5fDoaUhcX44wBWIJIUuQ9Dfk9+Ph8OY3D6ypw==
+"@astrojs/preact@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-0.5.2.tgz#ed94b5a2a9744cff898201a5645829631cc0dbcd"
+  integrity sha512-2mbts+LibjD4yfr9P/cERsM/qXK1Y52ffatU6QD2UPltbY4qd8rMvPQj2JoFkB598GsB3geMPpxQj/29BUsLyQ==
   dependencies:
     "@babel/core" ">=7.0.0-0 <8.0.0"
     "@babel/plugin-transform-react-jsx" "^7.17.12"
@@ -615,14 +615,14 @@ ast-types@0.14.2, ast-types@^0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro-robots-txt@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/astro-robots-txt/-/astro-robots-txt-0.3.7.tgz#1a107f8bbcc4946f12d05346b17b41475ec6f691"
-  integrity sha512-UWUstLmkVF6zaM8oaYRDqkcvxpa1RLUsJRNXfN2b5azODKEfgICzXRM4MA0a+/oq7lEuk0JPKJbbgwMOeYT1og==
+astro-robots-txt@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/astro-robots-txt/-/astro-robots-txt-0.3.8.tgz#c484d09fb1764813b4b31b7452c37d3338799dad"
+  integrity sha512-rx69T8hd79whl4cmGKZCA5KUgWuSU9EKPPqO6RKfIrvDoFpw7sZ/j7EDXWYmT7f+U94oiISNVLnIafmUEkgC5A==
   dependencies:
     deepmerge "^4.2.2"
     valid-filename "^4.0.0"
-    zod "^3.17.9"
+    zod "^3.18.0"
 
 astro@^1.0.5:
   version "1.0.5"
@@ -3358,10 +3358,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@^3.17.3, zod@^3.17.9:
-  version "3.17.10"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.17.10.tgz#8716a05e6869df6faaa878a44ffe3c79e615defb"
-  integrity sha512-IHXnQYQuOOOL/XgHhgl8YjNxBHi3xX0mVcHmqsvJgcxKkEczPshoWdxqyFwsARpf41E0v9U95WUROqsHHxt0UQ==
+zod@^3.17.3, zod@^3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.18.0.tgz#2eed58b3cafb8d9a67aa2fee69279702f584f3bc"
+  integrity sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==
 
 zwitch@^2.0.0:
   version "2.0.2"

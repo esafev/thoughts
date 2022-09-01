@@ -1,7 +1,7 @@
 # Thoughts
-Tech Stack: Astro + Preact
+stack: astro + preact
 
-Dev Mode:
+dev run:
 ```
 yarn && yarn dev
 ```

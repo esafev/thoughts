@@ -81,10 +81,10 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
-"@astrojs/preact@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-1.0.2.tgz#b1d80a27796c68633072fb8f9351a3ef4dd5ef0d"
-  integrity sha512-hJn1SuclnC15qzsZ1d0PkJGi03B2pCokpWl9+uydYJTtAPVqA5fDoaUhcX44wBWIJIUuQ9Dfk9+Ph8OY3D6ypw==
+"@astrojs/preact@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-1.1.1.tgz#c04dc5bd6d2516989487862df00283fc0872d2e4"
+  integrity sha512-33YXVOBSRn0mzx7/Qlnw96CaBLMrwRZ9XLBWEox4738FXzWTyV0JcZ7iwNMCC7vw9pjjnCFouqKlK3xFdBFcxg==
   dependencies:
     "@babel/core" ">=7.0.0-0 <8.0.0"
     "@babel/plugin-transform-react-jsx" "^7.17.12"
@@ -98,10 +98,10 @@
   dependencies:
     prismjs "^1.28.0"
 
-"@astrojs/rss@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-1.0.0.tgz#6d9db543793ac6e33da3058f27156122d5a951a6"
-  integrity sha512-vOPocf/SC0TfHsCwQXupvLGm0y3oIwpRCnnF2igDP3gFSxQEOk4nmsuVTEU2N87hYyX1/5uxbjJhixuSV/L8Cw==
+"@astrojs/rss@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-1.0.2.tgz#a8890e4ab25da843a2a2155a5d5a4b0f7a530b94"
+  integrity sha512-WPMW5a3D+nAbuu/i7LANfp1GnVrdnzcsUNrR7o8IvPJXJMjVGtDqdUqNDj20Rj3rwcWbOL2KVvGPMjCqx0tRWQ==
   dependencies:
     fast-xml-parser "^4.0.8"
 
@@ -2842,10 +2842,10 @@ preact-render-to-string@^5.2.0:
   dependencies:
     pretty-format "^3.8.0"
 
-preact@^10.10.6:
-  version "10.10.6"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.10.6.tgz#1fe62aecf93974b64e6a42e09ba1f00f93207d14"
-  integrity sha512-w0mCL5vICUAZrh1DuHEdOWBjxdO62lvcO++jbzr8UhhYcTbFkpegLH9XX+7MadjTl/y0feoqwQ/zAnzkc/EGog==
+preact@^10.11.0:
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.11.0.tgz#26af45a0613f4e17a197cc39d7a1ea23e09b2532"
+  integrity sha512-Fk6+vB2kb6mSJfDgODq0YDhMfl0HNtK5+Uc9QqECO4nlyPAQwCI+BKyWO//idA7ikV7o+0Fm6LQmNuQi1wXI1w==
 
 preferred-pm@^3.0.3:
   version "3.0.3"

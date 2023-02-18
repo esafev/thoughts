@@ -1080,9 +1080,9 @@ dequal@^2.0.0:
   integrity sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
 
 devalue@^4.2.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/devalue/-/devalue-4.3.0.tgz#d86db8fee63a70317c2355be0d3d1b4d8f89a44e"
-  integrity sha512-n94yQo4LI3w7erwf84mhRUkUJfhLoCZiLyoOZ/QFsDbcWNZePrLwbQpvZBUG2TNxwV3VjCKPxkiiQA6pe3TrTA==
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/devalue/-/devalue-4.2.3.tgz#313bb7e7cf74100bfddab9182b2d1b48ba14701a"
+  integrity sha512-JG6Q248aN0pgFL57e3zqTVeFraBe+5W2ugvv1mLXsJP6YYIYJhRZhAl7QP8haJrqob6X10F9NEkuCvNILZTPeQ==
 
 diff@^5.0.0, diff@^5.1.0:
   version "5.1.0"

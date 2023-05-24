@@ -41,6 +41,17 @@ const link = `${import.meta.env.SITE}/posts/${slug}`;
     margin: 1em 0 1em 0;
   }
 
+  article :global(img) {
+    height: auto;
+    width: 100%;
+  }
+
+  article :global(figure > figcaption) {
+    color: var(--theme-sub-text);
+    font-size: .9em;
+    line-height: 1.35em;
+  }
+
   article :global(h2) {
     font-size: 1.3em;
   }

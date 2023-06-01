@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/preact": "^2.1.0",
+    "@astrojs/preact": "^2.2.1",
     "astro": "^2.3.3"
   },
   "dependencies": {

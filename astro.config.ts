@@ -6,9 +6,6 @@ import robotsTxt from 'astro-robots-txt';
 
 const config = {
   site: 'https://esafev.com',
-  experimental: {
-    integrations: true,
-  },
   integrations: [
     preact(), 
     sitemap(), 

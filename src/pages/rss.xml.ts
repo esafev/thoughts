@@ -7,7 +7,7 @@ const get = () => rss({
   description: 'Not causing trouble, not touching anything, fixing the primus',
   site: import.meta.env.SITE,
   items: getBlogPosts().map((post) => ({
-    link: post.frontmatter.slug,
+    link: `posts/${post.frontmatter.slug}`
     title: post.frontmatter.title,
     description: post.frontmatter.description,
     pubDate: post.frontmatter.pubDate

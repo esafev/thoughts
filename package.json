@@ -16,6 +16,6 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "astro-robots-txt": "^0.5.0",
-    "preact": "^10.17.1"
+    "preact": "^10.18.1"
   }
 }

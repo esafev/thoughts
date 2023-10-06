@@ -1,16 +1,16 @@
 import rss from '@astrojs/rss';
 
-import { getBlogPosts } from '@utils/posts';
+import { getNotes } from '@utils/notes';
 
 const get = () => rss({
   title: 'Vlad Esafev',
   description: 'Not causing trouble, not touching anything, fixing the primus',
   site: import.meta.env.SITE,
-  items: getBlogPosts().map((post) => ({
-    link: `posts/${post.frontmatter.slug}`,
-    title: post.frontmatter.title,
-    description: post.frontmatter.description,
-    pubDate: post.frontmatter.pubDate
+  items: getNotes().map((note) => ({
+    link: `notes/${note.frontmatter.slug}`,
+    title: note.frontmatter.title,
+    description: note.frontmatter.description,
+    pubDate: note.frontmatter.pubDate
   }))
 });
 

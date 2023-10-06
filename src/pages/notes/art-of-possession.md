@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/NoteLayout.astro
 title: Practicing the Art of Possession
 pubDate: 24 May 2023
 description: Exploring the realms of maximalism and minimalism

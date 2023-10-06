@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro 
+layout: ../../layouts/NoteLayout.astro 
 title: Regardless
 pubDate: 16 Jul 2022
 description: Just start again

@@ -1,15 +1,15 @@
 ---
 import Head from '@components/Head.astro';
 import Header from '@components/Header.astro';
-import PostPreview from '@components/PostPreview.astro';
+import NotePreview from '@components/NotePreview.astro';
 import Footer from '@components/Footer.astro';
 
-import { getBlogPosts } from '@utils/posts';
+import { getNotes } from '@utils/notes';
 
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
 const link = import.meta.env.SITE;
-const posts = getBlogPosts();
+const notes = getNotes();
 ---
 
 <html lang="en">
@@ -20,7 +20,7 @@ const posts = getBlogPosts();
   <body>
     <Header />
     <main>
-      {posts.map((p) => <PostPreview post={p} />)}
+      {notes.map((n) => <NotePreview note={n} />)}
     </main>
     <Footer />
   </body>

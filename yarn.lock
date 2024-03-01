@@ -61,17 +61,17 @@
     unist-util-visit "^4.1.2"
     vfile "^5.3.7"
 
-"@astrojs/preact@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-3.1.0.tgz#ba51566f3cc61708c667c8c13b9b52c0809d2d2e"
-  integrity sha512-17Eo+H3fTgcmKUa7v6aAt2BIkffdTZGR4aC0K2jO4nyNhgLRAEuaoXXJwzAG1x0UHnCw7bTQ2Vv3vuJFRy1PTg==
+"@astrojs/preact@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-3.1.1.tgz#59f68152908364d788b465e8f2074fa3fd20d990"
+  integrity sha512-ASgmVzh4wLyIyynp5CIfDwE45Vg/tIP+Y+5SnQtURmCP1qZpjdUbsw+bGQ0wCSXtjIbzCBa7Kw7Qn0g6WE2W2w==
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.22.5"
     "@babel/plugin-transform-react-jsx-development" "^7.22.5"
     "@preact/preset-vite" "^2.7.0"
     "@preact/signals" "^1.2.1"
     babel-plugin-transform-hook-names "^1.0.2"
-    preact-render-to-string "^6.3.1"
+    preact-render-to-string "~6.3.1"
     preact-ssr-prepass "^1.2.1"
 
 "@astrojs/prism@^3.0.0":
@@ -3223,7 +3223,7 @@ postcss@^8.4.27:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-preact-render-to-string@^6.3.1:
+preact-render-to-string@~6.3.1:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-6.3.1.tgz#2479ebca8e6721cacfcecaa79bd861005a3d9b8f"
   integrity sha512-NQ28WrjLtWY6lKDlTxnFpKHZdpjfF+oE6V4tZ0rTrunHrtZp6Dm0oFrcJalt/5PNeqJz4j1DuZDS0Y6rCBoqDA==

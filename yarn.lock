@@ -104,13 +104,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "@astrojs/rss@npm:4.0.5"
+"@astrojs/rss@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@astrojs/rss@npm:4.0.6"
   dependencies:
-    fast-xml-parser: "npm:^4.2.7"
+    fast-xml-parser: "npm:^4.3.6"
     kleur: "npm:^4.1.5"
-  checksum: 10c0/b8dfe1a9121101b8554e37f9c2e0f7c4f6a06958fade69a88fb43bfea896f98d65c303955641274ff2c4152c9834e957228e4f0ae6fc7fb62b65fb174978f733
+  checksum: 10c0/78313d04b9757085be8740a7fb8ca61f2aa020931b1aca2d7cfdff0e49b842d1303a7c2e223463a67216abd4c1b323be1e099bd346f8a06393c3fe1280bbe4c1
   languageName: node
   linkType: hard
 
@@ -503,7 +503,7 @@ __metadata:
   dependencies:
     "@astrojs/mdx": "npm:^1.1.5"
     "@astrojs/preact": "npm:^3.2.0"
-    "@astrojs/rss": "npm:^4.0.5"
+    "@astrojs/rss": "npm:^4.0.6"
     "@astrojs/sitemap": "npm:^3.1.4"
     astro: "npm:^3.6.5"
     astro-robots-txt: "npm:^1.0.0"
@@ -2426,14 +2426,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^4.2.7":
-  version: 4.2.7
-  resolution: "fast-xml-parser@npm:4.2.7"
+"fast-xml-parser@npm:^4.3.6":
+  version: 4.4.0
+  resolution: "fast-xml-parser@npm:4.4.0"
   dependencies:
     strnum: "npm:^1.0.5"
   bin:
     fxparser: src/cli/cli.js
-  checksum: 10c0/0681922d95713062ec6205fd41be503890c474a45831c39502e72fccf0b0bd88c49d2c2fa79c6d24d432573631d515967fd17938bcedf230cb134c291cbbbf5e
+  checksum: 10c0/ce32fad713471a40bea67959894168f297a5dd0aba64b89a2abc71a4fec0b1ae1d49c2dd8d8719ca8beeedf477824358c8a486b360b9f3ef12abc2e355d11318
   languageName: node
   linkType: hard
 

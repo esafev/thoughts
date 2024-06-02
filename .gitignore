@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # yarn
 .yarn/install-state.gz
+
+# astro and vercel
+.astro/
+.vercel/

@@ -4,8 +4,6 @@ import Header from '@components/Header.astro';
 import NotePreview from '@components/NotePreview.astro';
 import Footer from '@components/Footer.astro';
 
-import Plausible from '@components/Plausible.astro';
-
 import { getNotes } from '@utils/notes';
 
 const title = 'Vlad Esafev';
@@ -15,7 +13,6 @@ const notes = getNotes();
 ---
 
 <html lang="en">
-  <Plausible />
   <head>
     <Head {title} {description} {link} />
   </head>

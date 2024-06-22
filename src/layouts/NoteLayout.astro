@@ -4,13 +4,15 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import NoteHeader from '@components/NoteHeader.astro';
 
-const { 
+import Plausible from '@components/Plausible.astro';
+
+const {
   content: {
     title,
     description,
     pubDate,
     slug
-  } 
+  }
 } = Astro.props;
 
 const link = `${import.meta.env.SITE}/notes/${slug}`;

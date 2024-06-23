@@ -1,7 +1,3 @@
-# Thoughts
-stack: astro + preact
-
-dev run:
 ```
-yarn && yarn dev
+I'm not sure, but it's my personal place where I have a dialogue with myself.
 ```

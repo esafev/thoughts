@@ -11,9 +11,6 @@ export interface Props {
 
 const { title, description, link } = Astro.props;
 ---
-<!-- Plausible -->
-<Plausible />
-
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
@@ -38,3 +35,6 @@ const { title, description, link } = Astro.props;
 <meta property="twitter:url" content={link} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
+
+<!-- Plausible -->
+<Plausible />

@@ -1,0 +1,11 @@
+---
+const ghResponse = await fetch(
+  'https://api.github.com/repos/esafev/thoughts/branches/main'
+);
+const ghCommits = await ghResponse.json();
+
+const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
+
+---
+
+<span>Last updated: {lastCommitDate}</span>

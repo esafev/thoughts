@@ -1,18 +1,36 @@
 <footer>
-  <hr width='25%'/>
-  <p>An engineer, a dreamer, a reader.</p>
-  <br />
+  <slot />
   <span>
     [↗]: <a target='_blank' href='mailto:vlad@esafev.com'>@</a>, <a target='_blank' href='https://are.na/vlad-esafev'>Are.na</a>, <a target='_blank' href='https://github.com/esafev'>GitHub</a>, <a target='_blank' href='https://x.com/vladesafev'>X</a>, <a target='_blank' href='https://esafev.com/rss.xml'>RSS</a>
   </span>
 </footer>
 
 <style>
+  footer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+    padding-top: 1em;
+  }
+
   footer p, span {
     color: var(--theme-sub-text);
   }
 
   footer hr {
     margin-bottom: 1em;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    width: 25%;
+
+    border-top: 1px solid var(--theme-sub-text);
   }
 </style>

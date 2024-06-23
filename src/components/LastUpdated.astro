@@ -1,11 +1,31 @@
 ---
-const ghResponse = await fetch(
-  'https://api.github.com/repos/esafev/thoughts/branches/main'
-);
-const ghCommits = await ghResponse.json();
+let lasUpdatedDate;
+try {
+  const ghResponse = await fetch(
+    'https://api.github.com/repos/esafev/thoughts/branches/main'
+  );
+  const ghCommits = await ghResponse.json();
 
-const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
+  const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
+  const date = new Date(lastCommitDate);
+  const dateTimeFormat = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Berlin',
+    dateStyle: 'medium',
+    timeStyle: 'short'
+  });
+
+  lasUpdatedDate = `${dateTimeFormat.format(date)} [CET]`;
+} catch {
+  lasUpdatedDate = 'unknown';
+}
 
 ---
 
-<span>Last updated: {lastCommitDate}</span>
+<span>Last updated: {lasUpdatedDate}</span>
+
+
+<style>
+  span {
+    color: var(--theme-sub-text);
+  }
+</style>

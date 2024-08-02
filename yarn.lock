@@ -907,7 +907,7 @@ __metadata:
     "@astrojs/vercel": "npm:^7.7.2"
     astro: "npm:^4.13.0"
     astro-robots-txt: "npm:^1.0.0"
-    preact: "npm:^10.22.1"
+    preact: "npm:^10.23.1"
     sharp: "npm:^0.33.4"
   languageName: unknown
   linkType: soft
@@ -5445,10 +5445,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.22.1":
-  version: 10.22.1
-  resolution: "preact@npm:10.22.1"
-  checksum: 10c0/9163b97d6fc0ce6b945ed77695d00c4fa07e317d0723e7b9d10c748153d30596abab8b26861ae45591e47bff25515da91406ce7f1c9e66cd9cac7e7f6c927930
+"preact@npm:^10.23.1":
+  version: 10.23.1
+  resolution: "preact@npm:10.23.1"
+  checksum: 10c0/f0eb37999bfa9cbc725e57e189387c77919fa05d17cdc3c4ff41660298805159867689f1d974eb8e6496288c0212760490d0e6f1c12022e0f5a74d06cc618e85
   languageName: node
   linkType: hard
 

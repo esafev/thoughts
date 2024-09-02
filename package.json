@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.5",
-    "@astrojs/preact": "^3.5.1",
+    "@astrojs/preact": "^3.5.2",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/vercel": "^7.8.0",

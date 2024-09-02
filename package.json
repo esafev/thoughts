@@ -18,5 +18,8 @@
     "astro-robots-txt": "^1.0.0",
     "preact": "^10.23.1",
     "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }

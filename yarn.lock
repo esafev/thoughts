@@ -79,19 +79,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/preact@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "@astrojs/preact@npm:3.5.2"
+"@astrojs/preact@npm:^3.5.3":
+  version: 3.5.3
+  resolution: "@astrojs/preact@npm:3.5.3"
   dependencies:
     "@babel/plugin-transform-react-jsx": "npm:^7.25.2"
     "@babel/plugin-transform-react-jsx-development": "npm:^7.24.7"
     "@preact/preset-vite": "npm:2.8.2"
     "@preact/signals": "npm:^1.3.0"
     babel-plugin-transform-hook-names: "npm:^1.0.2"
-    preact-render-to-string: "npm:^6.5.9"
+    preact-render-to-string: "npm:^6.5.10"
   peerDependencies:
     preact: ^10.6.5
-  checksum: 10c0/7eb7a65f448b60a403eeb9e08badb9b1184344aa85d6e020811ff31806723c201f89862f8390de8c0ce76ae271919b3fe212ece9df73a2c237341fe943aca68f
+  checksum: 10c0/e168705ea6106bbb522adc3066c205669e64f9b2e2ef8cb3ac8bc5a026f0469d2a5c52afcdbc98268d0483a5b5edebb383b831f2c21cbf0f8dcf495aef7475d6
   languageName: node
   linkType: hard
 
@@ -905,7 +905,7 @@ __metadata:
   resolution: "@esafev/thoughts@workspace:."
   dependencies:
     "@astrojs/mdx": "npm:^3.1.7"
-    "@astrojs/preact": "npm:^3.5.2"
+    "@astrojs/preact": "npm:^3.5.3"
     "@astrojs/rss": "npm:^4.0.7"
     "@astrojs/sitemap": "npm:^3.1.6"
     "@astrojs/vercel": "npm:^7.8.0"
@@ -5655,12 +5655,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact-render-to-string@npm:^6.5.9":
-  version: 6.5.10
-  resolution: "preact-render-to-string@npm:6.5.10"
+"preact-render-to-string@npm:^6.5.10":
+  version: 6.5.11
+  resolution: "preact-render-to-string@npm:6.5.11"
   peerDependencies:
     preact: ">=10"
-  checksum: 10c0/46a8f7d2041675a75b7dfb6f6a254df61e758dd900fd17a06aa19d63d360eaff6b629452b2233fbb4adf422537f64fab665de39e676247c006b98f5d5ef0af7e
+  checksum: 10c0/a68b704c1343756022fb41322154b45e39f6021b940cbc97e86c292627d017d019700339a17d67b42c308b14fc5323fc120c798f785d6a3e993c8f273610bfe2
   languageName: node
   linkType: hard
 

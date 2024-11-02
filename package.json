@@ -13,7 +13,7 @@
     "@astrojs/preact": "^3.5.3",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/vercel": "^7.8.0",
+    "@astrojs/vercel": "^7.8.2",
     "astro": "^4.16.8",
     "astro-robots-txt": "^1.0.0",
     "preact": "^10.24.3",

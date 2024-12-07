@@ -416,7 +416,7 @@ __metadata:
     "@astrojs/sitemap": "npm:^3.2.1"
     astro: "npm:^4.16.16"
     astro-robots-txt: "npm:^1.0.0"
-    preact: "npm:^10.24.3"
+    preact: "npm:^10.25.1"
     sharp: "npm:^0.33.5"
     typescript: "npm:^5.7.2"
   languageName: unknown
@@ -4723,10 +4723,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.24.3":
-  version: 10.24.3
-  resolution: "preact@npm:10.24.3"
-  checksum: 10c0/c863df6d7be6a660480189762d8a8f2d4148733fc2bb9efbd9d2fd27315d2c7ede850a16077d716c91666c915c0349bd3c9699733e4f08457226a0519f408761
+"preact@npm:^10.25.1":
+  version: 10.25.1
+  resolution: "preact@npm:10.25.1"
+  checksum: 10c0/bc9255b20931781ed4b26f9d294ba2ec433dc6df8248d802a82a32b3841eb64cd5a70948a814f3793eb9eae7f95a556ec5573b63c62221534533a26db6a71fcb
   languageName: node
   linkType: hard
 

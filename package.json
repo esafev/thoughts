@@ -20,5 +20,6 @@
   },
   "devDependencies": {
     "typescript": "^5.7.2"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }

@@ -105,13 +105,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^4.0.9":
-  version: 4.0.9
-  resolution: "@astrojs/rss@npm:4.0.9"
+"@astrojs/rss@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "@astrojs/rss@npm:4.0.10"
   dependencies:
     fast-xml-parser: "npm:^4.5.0"
     kleur: "npm:^4.1.5"
-  checksum: 10c0/9ad979a6f6093d5ad68f75520084cbcba8989f2fad9b3aa0b107e5b2870eb2cf9d67769a0f7ea5b36484baa84a52e5db05a6b0def636ee1f8477b82a874729d0
+  checksum: 10c0/df68ca96fb369c672caa82aea2afac6684112a0280a6e1ccafc796bae0944d58ac8006e8d2505cb7fc0f78c4d705a7fdbcc9edc211267b2d2a0be7d09d65b1c3
   languageName: node
   linkType: hard
 
@@ -377,7 +377,7 @@ __metadata:
   dependencies:
     "@astrojs/mdx": "npm:^3.1.9"
     "@astrojs/preact": "npm:^3.5.4"
-    "@astrojs/rss": "npm:^4.0.9"
+    "@astrojs/rss": "npm:^4.0.10"
     "@astrojs/sitemap": "npm:^3.2.1"
     astro: "npm:^4.16.16"
     astro-robots-txt: "npm:^1.0.0"

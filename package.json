@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^4.16.16",
     "astro-robots-txt": "^1.0.0",
-    "preact": "^10.24.3",
+    "preact": "^10.25.1",
     "sharp": "^0.33.5"
   },
   "devDependencies": {

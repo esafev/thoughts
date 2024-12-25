@@ -2,7 +2,7 @@
 import Head from '@components/Head.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import PostHeader from '@components/PostHeader.astro';
+import NoteHeader from '@components/NoteHeader.astro';
 
 const {
   content: { title, description, pubDate, slug },
@@ -18,7 +18,7 @@ const link = `${import.meta.env.SITE}/notes/${slug}`;
 
   <body>
     <Header />
-    <PostHeader {title} {pubDate} />
+    <NoteHeader {title} {pubDate} />
     <article>
       <slot />
     </article>

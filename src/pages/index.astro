@@ -1,7 +1,7 @@
 ---
 import Head from '@components/Head.astro';
 import Header from '@components/Header.astro';
-import NotePreview from '@components/NotePreview.astro';
+import PostPreview from '@components/PostPreview.astro';
 import Footer from '@components/Footer.astro';
 import LastUpdated from '@components/LastUpdated.astro';
 
@@ -21,7 +21,7 @@ const notes = getNotes();
   <body>
     <Header />
     <main>
-      {notes.map((n) => <NotePreview note={n} />)}
+      {notes.map((n) => <PostPreview note={n} />)}
     </main>
     <Footer>
       <LastUpdated />

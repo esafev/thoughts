@@ -1,15 +1,15 @@
 ---
 export interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = 'Vlad Esafev' } = Astro.props;
 ---
 
 <header>
   <h1>
     <a href='/'>
-    {title || 'Vlad Esafev'}
+    {title}
     </a>
   </h1>
 </header>

@@ -17,8 +17,8 @@ const link = `${import.meta.env.SITE}/notes/${slug}`;
   </head>
 
   <body>
-    <Header />
-    <NoteHeader {title} {pubDate} />
+  <Header title='↩ Index' />
+  <NoteHeader {title} {pubDate} />
     <article>
       <slot />
     </article>

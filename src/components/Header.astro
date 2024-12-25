@@ -1,7 +1,15 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <header>
   <h1>
     <a href='/'>
-      Vlad Esafev
+    {title || 'Vlad Esafev'}
     </a>
   </h1>
 </header>

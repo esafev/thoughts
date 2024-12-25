@@ -166,7 +166,6 @@ __metadata:
     "@astrojs/rss": "npm:^4.0.10"
     "@astrojs/sitemap": "npm:^3.2.1"
     astro: "npm:5.1.1"
-    astro-robots-txt: "npm:^1.0.0"
     sharp: "npm:^0.33.5"
     typescript: "npm:^5.7.2"
   languageName: unknown
@@ -1420,16 +1419,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-robots-txt@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "astro-robots-txt@npm:1.0.0"
-  dependencies:
-    valid-filename: "npm:^4.0.0"
-    zod: "npm:^3.22.2"
-  checksum: 10c0/d389573e627877b4e69984897066cfb7df610eac1cdec47da69ccce239fed8dc9e69bb9046b700f0f532837a4d5ea6b0e065d5b73dd94cf8b89ec2e33d87a3a6
-  languageName: node
-  linkType: hard
-
 "astro@npm:5.1.1":
   version: 5.1.1
   resolution: "astro@npm:5.1.1"
@@ -2352,13 +2341,6 @@ __metadata:
   dependencies:
     reusify: "npm:^1.0.4"
   checksum: 10c0/76c7b5dafb93c7e74359a3e6de834ce7a7c2e3a3184050ed4cb652661de55cf8d4895178d8d3ccd23069395056c7bb15450660d38fb382ca88c142b22694d7c9
-  languageName: node
-  linkType: hard
-
-"filename-reserved-regex@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "filename-reserved-regex@npm:3.0.0"
-  checksum: 10c0/2b1df851a37f84723f9d8daf885ddfadd3dea2a124474db405295962abc1a01d6c9b6b27edec33bad32ef601e1a220f8a34d34f30ca5a911709700e2b517e268
   languageName: node
   linkType: hard
 
@@ -5475,15 +5457,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"valid-filename@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "valid-filename@npm:4.0.0"
-  dependencies:
-    filename-reserved-regex: "npm:^3.0.0"
-  checksum: 10c0/cfbd173134b63ba2e831e464b9828c6ca8e4e00344271693488e42d94387944813cdbde49d1c76026467c3fe3a5b2de8c8c485eb75ec78457007f2dcde000ac4
-  languageName: node
-  linkType: hard
-
 "vfile-location@npm:^5.0.0":
   version: 5.0.2
   resolution: "vfile-location@npm:5.0.2"
@@ -5728,7 +5701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.2, zod@npm:^3.23.8":
+"zod@npm:^3.23.8":
   version: 3.23.8
   resolution: "zod@npm:3.23.8"
   checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69

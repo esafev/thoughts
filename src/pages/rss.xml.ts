@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 
-import { getNotes } from "@utils/notes";
+import { getNotes } from "@/utils/notes";
 
 export function GET({ site }) {
   return rss({

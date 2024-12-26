@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "yarn tsc && astro build",
     "tsc": "tsc --skipLibCheck --noEmit"
   },
   "dependencies": {

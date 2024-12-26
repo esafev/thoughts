@@ -1,16 +1,17 @@
 ---
-// TODO: Type it
+import type { Note } from '@/types/note';
+
 export interface Props {
-  note: any;
+  note: Note;
 }
 
-const { 
-  note: { 
+const {
+  note: {
     url,
     frontmatter: {
       title,
       pubDate
-    } 
+    }
   }
 } = Astro.props;
 ---

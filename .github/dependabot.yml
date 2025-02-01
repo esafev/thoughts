@@ -13,6 +13,5 @@ updates:
     versioning-strategy: auto
     allow:
       - dependency-type: "direct"
-      - dependency-type: "indirect"
     reviewers:
       - "esafev"

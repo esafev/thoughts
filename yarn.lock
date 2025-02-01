@@ -1327,9 +1327,9 @@ __metadata:
   linkType: hard
 
 "character-entities@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "character-entities@npm:2.0.1"
-  checksum: 10c0/b70185f4a45399d8f1b0393a86e5c43b85b375a5b55e09a46cad5c2ac450f67330a30348b5d8ec52d4aa7d884471718fbf34de8964489561a53588cfd8c6b950
+  version: 2.0.2
+  resolution: "character-entities@npm:2.0.2"
+  checksum: 10c0/b0c645a45bcc90ff24f0e0140f4875a8436b8ef13b6bcd31ec02cfb2ca502b680362aa95386f7815bdc04b6464d48cf191210b3840d7c04241a149ede591a308
   languageName: node
   linkType: hard
 

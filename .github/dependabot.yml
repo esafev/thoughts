@@ -4,5 +4,17 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+<<<<<<< Updated upstream
+=======
+    # Group all astro-related updates together
+    groups:
+      astro-packages:
+        patterns:
+          - "@astrojs*"
+          - "astro"
+    versioning-strategy: auto
+    allow:
+      - dependency-type: "direct"
+>>>>>>> Stashed changes
     reviewers:
       - "esafev"

@@ -4,5 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    # Group all astro-related updates together
+    groups:
+      astro-packages:
+        patterns:
+          - "@astrojs*"
+          - "astro"
+    versioning-strategy: increase-if-necessary
     reviewers:
       - "esafev"

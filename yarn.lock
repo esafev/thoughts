@@ -79,13 +79,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^4.0.10":
-  version: 4.0.10
-  resolution: "@astrojs/rss@npm:4.0.10"
+"@astrojs/rss@npm:^4.0.11":
+  version: 4.0.11
+  resolution: "@astrojs/rss@npm:4.0.11"
   dependencies:
     fast-xml-parser: "npm:^4.5.0"
     kleur: "npm:^4.1.5"
-  checksum: 10c0/df68ca96fb369c672caa82aea2afac6684112a0280a6e1ccafc796bae0944d58ac8006e8d2505cb7fc0f78c4d705a7fdbcc9edc211267b2d2a0be7d09d65b1c3
+  checksum: 10c0/9ac4ec0801eb356d150c5259bc53dcaecb011f87261a347ad7bfc61931f5a330a3013e29ef04cccae0c39906c0881d3e361f5e38d2d5bb5833d6f395ad52b7cc
   languageName: node
   linkType: hard
 
@@ -164,7 +164,7 @@ __metadata:
   resolution: "@esafev/thoughts@workspace:."
   dependencies:
     "@astrojs/mdx": "npm:^4.0.3"
-    "@astrojs/rss": "npm:^4.0.10"
+    "@astrojs/rss": "npm:^4.0.11"
     "@astrojs/sitemap": "npm:^3.2.1"
     astro: "npm:^5.1.1"
     sharp: "npm:^0.33.5"

@@ -10,6 +10,9 @@ updates:
         patterns:
           - "@astrojs*"
           - "astro"
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: auto
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
     reviewers:
       - "esafev"

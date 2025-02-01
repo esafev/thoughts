@@ -3,6 +3,13 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+    # Group all astro-related updates together
+    groups:
+      astro-packages:
+        patterns:
+          - "@astrojs*"
+          - "astro"
+    versioning-strategy: increase-if-necessary
     reviewers:
       - "esafev"

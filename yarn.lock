@@ -883,11 +883,11 @@ __metadata:
   linkType: hard
 
 "@types/estree-jsx@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "@types/estree-jsx@npm:1.0.1"
+  version: 1.0.5
+  resolution: "@types/estree-jsx@npm:1.0.5"
   dependencies:
     "@types/estree": "npm:*"
-  checksum: 10c0/3aa4d648ba3ddffa73eff63904a4ef7f78fc78c2fc22ad0ef80908e7e5839e4622dc8d8dc46708b07a6e732e72692cf234db63650c3ca608cc5b41c3e81f37a2
+  checksum: 10c0/07b354331516428b27a3ab99ee397547d47eb223c34053b48f84872fafb841770834b90cc1a0068398e7c7ccb15ec51ab00ec64b31dc5e3dbefd624638a35c6d
   languageName: node
   linkType: hard
 

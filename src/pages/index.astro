@@ -11,7 +11,7 @@ import { getNotes } from '@/utils/notes';
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
 const link = import.meta.env.SITE;
-const notes = getNotes();
+const notes = await getNotes();
 ---
 
 <html lang="en">

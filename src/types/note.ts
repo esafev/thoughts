@@ -1,12 +1,3 @@
-type Frontmatter = {
-  title: string;
-  description: string;
-  pubDate: Date;
-  slug: string;
-  published: boolean;
-};
+import type { CollectionEntry } from 'astro:content';
 
-export type Note = {
-  url: string;
-  frontmatter: Frontmatter;
-};
+export type Note = CollectionEntry<'notes'>;

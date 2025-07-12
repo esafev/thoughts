@@ -1,15 +1,21 @@
 ---
 export interface Props {
   title: string;
-  pubDate: string;
+  pubDate: Date;
 }
 
 const { title, pubDate } = Astro.props;
+
+const formattedDate = pubDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}) || 'Unknown date';
 ---
 
 <section>
   <h2>{title}</h2>
-  <span>{pubDate}</span>
+  <span>{formattedDate}</span>
 </section>
 
 <style>

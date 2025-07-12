@@ -1,17 +1,14 @@
-import type { Note } from '@/types/note';
+import { getCollection } from 'astro:content';
 
-function getNotes(): Note[] {
-  // Get all MDX files from notes directory
-  const notes: Note[] = Object.values(import.meta.glob("../pages/notes/*.mdx", { eager: true }));
-
+async function getNotes() {
+  const notes = await getCollection('notes');
+  
   // Sort notes by publication date (newest first) and filter out unpublished ones
   return notes
+    .filter(note => note.data.published)
     .sort((a, b) => {
-      const dateA = new Date(a.frontmatter.pubDate);
-      const dateB = new Date(b.frontmatter.pubDate); 
-      return dateB.valueOf() - dateA.valueOf();
-    })
-    .filter((note) => note.frontmatter.published);
+      return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+    });
 }
 
 export { getNotes };

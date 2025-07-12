@@ -5,7 +5,8 @@ import Footer from '@/components/Footer.astro';
 import NoteHeader from '@/components/NoteHeader.astro';
 
 const {
-  content: { title, description, pubDate, slug },
+  frontmatter: { title, description, pubDate },
+  slug,
 } = Astro.props;
 
 const link = `${import.meta.env.SITE}/notes/${slug}`;

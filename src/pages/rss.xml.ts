@@ -5,7 +5,7 @@ import mdxRenderer from "@astrojs/mdx/server.js";
 import { getNotes } from "@/utils/notes";
 
 const container = await experimental_AstroContainer.create();
-container.addServerRenderer({ renderer: mdxRenderer });
+container.addServerRenderer({ renderer: mdxRenderer, name: 'mdx' });
 
 export async function GET({ site }) {
   const notes = await getNotes();

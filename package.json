@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "yarn tsc && astro build",
+    "build": "bun tsc && astro build",
     "tsc": "tsc --skipLibCheck --noEmit"
   },
   "dependencies": {
@@ -16,6 +16,5 @@
   },
   "devDependencies": {
     "typescript": "^5.8.3"
-  },
-  "packageManager": "yarn@4.1.1"
+  }
 }

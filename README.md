@@ -5,5 +5,5 @@ Personal website. A place where thoughts find their form, somewhere between keep
 ## Development
 
 ```
-yarn dev
+bun dev
 ```

@@ -15,19 +15,21 @@ const { title = 'Vlad Esafev' } = Astro.props;
 </header>
 
 <style>
-  header h1 {
+  header {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
     font-size: 1em;
   }
 
-  header a {
-    margin-bottom: 2rem;
+  a {
     text-decoration: none;
-
     color: var(--theme-sub-text);
-  }
 
-  header a:hover {
-    background: none;
-    color: var(--theme-sub-text);
+    &:hover {
+      background: none;
+      color: var(--theme-sub-text);
+    }
   }
 </style>

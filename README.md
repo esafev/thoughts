@@ -5,5 +5,5 @@ Personal website. A place where thoughts find their form, somewhere between keep
 ## Development
 
 ```
-bun dev
+bun run dev
 ```

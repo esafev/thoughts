@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "bun tsc && astro build",
-    "tsc": "tsc --skipLibCheck --noEmit"
+    "build": "astro sync && bun tsc && astro build"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

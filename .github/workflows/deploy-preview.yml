@@ -23,7 +23,7 @@ jobs:
             const deployment = await github.rest.repos.createDeployment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: context.payload.pull_request.head.sha,  # Use SHA instead of ref
+              ref: context.payload.pull_request.head.ref,
               environment: 'Preview',
               required_contexts: [],
               auto_merge: false,
@@ -98,7 +98,7 @@ jobs:
             const deployments = await github.rest.repos.listDeployments({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: context.payload.pull_request.head.sha,
+              ref: context.payload.pull_request.head.ref,
               environment: 'Preview'
             });
 

@@ -1,7 +1,12 @@
 name: Deploy [Preview]
+
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -29,6 +34,7 @@ jobs:
               auto_merge: false,
               description: 'Deploying to Cloudflare Pages'
             });
+
             return deployment.data.id;
 
       - name: Setup Bun
@@ -56,22 +62,16 @@ jobs:
         with:
           script: |
             const isSuccess = '${{ steps.cloudflare.outcome }}' === 'success';
-            const state = isSuccess ? 'success' : 'failure';
-            const description = isSuccess
-              ? 'Deployed successfully'
-              : 'Deployment failed';
 
-            const data = {
+            await github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               deployment_id: ${{ steps.deployment.outputs.result }},
-              state: state,
-              description,
               environment: 'Preview',
-              environment_url: isSuccess ? '${{ steps.cloudflare.outputs.deployment-alias-url }}' : null
-            };
-
-            await github.rest.repos.createDeploymentStatus(data);
+              environment_url: isSuccess ? '${{ steps.cloudflare.outputs.deployment-alias-url }}' : null,
+              state: isSuccess ? 'success' : 'failure',
+              description: isSuccess ? 'Deployed successfully' : 'Deployment failed'
+            });
 
   cleanup:
     if: github.event.action == 'closed'
@@ -83,15 +83,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Delete Cloudflare Pages deployment
-        continue-on-error: true
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deployment delete --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.event.pull_request.head.ref }}
-
-      - name: Mark GitHub deployments as inactive
+      - name: Mark deployments as inactive
         uses: actions/github-script@v7
         with:
           script: |

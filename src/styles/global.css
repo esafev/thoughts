@@ -35,6 +35,8 @@
 
   font-family: "IBM Plex Mono", monospace;
   line-height: 1.5em;
+
+  hyphens: auto;
 }
 
 * {

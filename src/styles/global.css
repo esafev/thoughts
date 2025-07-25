@@ -35,6 +35,8 @@
 
   font-family: "IBM Plex Mono", monospace;
   line-height: 1.5em;
+
+  hyphens: auto;
 }
 
 * {
@@ -48,6 +50,8 @@ body {
   font-size: 13px;
   max-width: 60em;
   padding: 7em;
+
+  hyphens: auto;
 }
 
 @media only screen and (max-width: 480px) {

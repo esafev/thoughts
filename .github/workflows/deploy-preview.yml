@@ -48,6 +48,13 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.event.pull_request.head.ref }}
 
+      - name: Debug Cloudflare outputs
+        run: |
+          echo "${{ steps.cloudflare.outputs }}"
+          echo "Deployment URL: ${{ steps.cloudflare.outputs.url }}"
+          echo "Deployment ID: ${{ steps.cloudflare.outputs.deployment-id }}"
+          echo "Environment: ${{ steps.cloudflare.outputs.environment }}"
+
       - name: Update deployment status
         uses: actions/github-script@v7
         with:
@@ -63,7 +70,7 @@ jobs:
             });
 
   cleanup:
-      if: github.event_name == 'pull_request' && github.event.action == 'closed'
+      if: github.event.action == 'closed'
       runs-on: ubuntu-latest
       permissions:
         contents: read

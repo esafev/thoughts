@@ -78,6 +78,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       - name: Delete Cloudflare Pages deployment
         continue-on-error: true
         uses: cloudflare/wrangler-action@v3

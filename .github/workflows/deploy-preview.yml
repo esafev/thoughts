@@ -64,7 +64,7 @@ jobs:
               repo: context.repo.repo,
               deployment_id: ${{ steps.deployment.outputs.result }},
               state: 'success',
-              environment_url: '${{ steps.cloudflare.outputs.url }}',
+              environment_url: '${{ steps.cloudflare.outputs.deployment-alias-url }}',
               description: 'Deployed to Cloudflare Pages',
               environment: 'Preview'
             });

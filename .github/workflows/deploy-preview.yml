@@ -50,8 +50,7 @@ jobs:
 
       - name: Debug Cloudflare outputs
         run: |
-          echo "${{ toJSON(steps.cloudflare.outputs) }}"
-          echo "Deployment URL: ${{ steps.cloudflare.outputs.url }}"
+          echo "Deployment URL: ${{ steps.cloudflare.outputs.deployment-alias-url }}"
           echo "Deployment ID: ${{ steps.cloudflare.outputs.deployment-id }}"
           echo "Environment: ${{ steps.cloudflare.outputs.environment }}"
 

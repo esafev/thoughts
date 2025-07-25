@@ -1,6 +1,9 @@
 name: Deploy
-
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
@@ -8,6 +11,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,8 +28,40 @@ jobs:
         run: bun run build
 
       - name: Deploy to Cloudflare Pages
+        id: cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const output = `**Branch Preview**: ${{ steps.cloudflare.outputs.url }}`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            });
+
+  cleanup:
+      if: github.event_name == 'pull_request' && github.event.action == 'closed'
+      runs-on: ubuntu-latest
+      permissions:
+        contents: read
+        deployments: write
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Delete Preview Deployment
+          uses: cloudflare/wrangler-action@v3
+          with:
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            command: pages deployments delete --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.event.pull_request.head.ref }}

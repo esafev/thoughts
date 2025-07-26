@@ -50,7 +50,7 @@
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.12s;
+  animation-duration: 0.10s;
   animation-timing-function: ease;
 }
 

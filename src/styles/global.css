@@ -44,6 +44,16 @@
   margin: 0;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.12s;
+  animation-timing-function: ease;
+}
+
 body {
   background: var(--theme-bg);
 

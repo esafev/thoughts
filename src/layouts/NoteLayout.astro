@@ -11,7 +11,7 @@ const {
 const link = `${import.meta.env.SITE}/notes/${slug}`;
 ---
 
-<BaseLayout title='↩ Index' headProps={{ title, description, link }}>
+<BaseLayout headProps={{ title, description, link }}>
   <NoteHeader {title} {pubDate} />
 
   <article>

@@ -6,15 +6,5 @@ const notes = await getNotes();
 ---
 
 <section>
-  <h2><i>Recent notes:</i></Recent></h2>
   {notes.map((n) => <NotePreview note={n} />)}
 </section>
-
-<style>
-  h2 {
-    text-decoration: none;
-    color: var(--theme-sub-text);
-    font-size: 1em;
-    font-weight: 400;
-  }
-</style>

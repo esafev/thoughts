@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import Notes from '@/components/Notes.astro';
+
+const title = 'Vlad Esafev';
+const description = 'Not causing trouble, not touching anything, fixing the primus';
+const link = import.meta.env.SITE;
+---
+
+<BaseLayout {title} headProps={{ description, link, title }}>
+  <Notes />
+</BaseLayout>

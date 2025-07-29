@@ -1,35 +1,37 @@
 ---
-import Head from '@/components/Head.astro';
-import Header from '@/components/Header.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
 import Notes from '@/components/Notes.astro';
-import Footer from '@/components/Footer.astro';
-import LastUpdated from '@/components/LastUpdated.astro';
 import Intro from '@/components/Intro.astro';
+import LastUpdated from '@/components/LastUpdated.astro';
 
 const title = 'Vlad Esafev';
 const description = 'Not causing trouble, not touching anything, fixing the primus';
 const link = import.meta.env.SITE;
 ---
 
-<html lang="en">
-  <head>
-    <Head {title} {description} {link} />
-  </head>
+<BaseLayout
+  title={title}
+  headProps={{ description, link, title }}
+>
+  <main>
+    <Intro />
+    <h2>Recent notes:</h2>
+    <Notes />
+  </main>
 
-  <body>
-    <Header {title} />
-    <main>
-      <Intro />
-      <Notes />
-    </main>
-    <Footer>
-      <LastUpdated />
-    </Footer>
-  </body>
-</html>
+  <LastUpdated slot='footer' />
+</BaseLayout>
 
 <style>
-  main {
-    margin: 3em 0;
+  h2 {
+    margin-bottom: 0.5em;
+
+    color: var(--theme-sub-text);
+    text-decoration: none;
+
+    font-size: 1em;
+    font-weight: 400;
+    font-style: italic;
   }
 </style>

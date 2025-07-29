@@ -1,7 +1,6 @@
 ---
-import Head from '@/components/Head.astro';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
 import NoteHeader from '@/components/NoteHeader.astro';
 
 const {
@@ -12,98 +11,92 @@ const {
 const link = `${import.meta.env.SITE}/notes/${slug}`;
 ---
 
-<html lang='en'>
-  <head>
-    <Head {title} {description} {link} />
-  </head>
+<BaseLayout title='↩ Index' headProps={{ title, description, link }}>
+  <NoteHeader {title} {pubDate} />
 
-  <body>
-    <Header title='↩ Index' />
-    <NoteHeader {title} {pubDate} />
-    <article>
-      <slot />
-    </article>
-    <Footer />
-    <style>
-      /* TODO: Get rid of global using */
-      article :global(p, h2, h3) {
-        margin: 1em 0 1em 0;
-      }
+  <article>
+    <slot />
+  </article>
+</BaseLayout>
 
-      article :global(img) {
-        height: auto;
-        width: 100%;
-      }
+<style>
+  /* TODO: Get rid of global using */
+  article :global(p, h2, h3) {
+    margin: 1em 0 1em 0;
+  }
 
-      article :global(figure > figcaption) {
-        color: var(--theme-sub-text);
-        font-size: 0.9em;
-        line-height: 1.35em;
-      }
+  article :global(img) {
+    height: auto;
+    width: 100%;
+  }
 
-      article :global(h2) {
-        font-size: 1.3em;
-      }
+  article :global(figure > figcaption) {
+    color: var(--theme-sub-text);
+    font-size: 0.9em;
+    line-height: 1.35em;
+  }
 
-      article :global(h3) {
-        font-size: 1.1em;
-      }
+  article :global(h2) {
+    font-size: 1.3em;
+  }
 
-      article :global(pre > code) {
-        background-color: inherit;
-      }
+  article :global(h3) {
+    font-size: 1.1em;
+  }
 
-      article :global(blockquote) {
-        display: flex;
-        flex-direction: column;
-        padding-left: 1em;
+  article :global(pre > code) {
+    background-color: inherit;
+  }
 
-        background: transparent;
-        border-left: 4px solid var(--theme-code-block);
-      }
+  article :global(blockquote) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
 
-      article :global(code) {
-        --border-radius: 3px;
-        --padding-block: 0.2rem;
-        --padding-inline: 0.33rem;
+    background: transparent;
+    border-left: 4px solid var(--theme-code-block);
+  }
 
-        font-size: 0.85em;
-        color: inherit;
-        padding: var(--padding-block) var(--padding-inline);
-        margin: calc(var(--padding-block) * -1) -0.125em;
-        border-radius: var(--border-radius);
-        word-break: break-word;
+  article :global(code) {
+    --border-radius: 3px;
+    --padding-block: 0.2rem;
+    --padding-inline: 0.33rem;
 
-        background-color: var(--theme-code-block);
-      }
+    font-size: 0.85em;
+    color: inherit;
+    padding: var(--padding-block) var(--padding-inline);
+    margin: calc(var(--padding-block) * -1) -0.125em;
+    border-radius: var(--border-radius);
+    word-break: break-word;
 
-      article :global(pre.astro-code > code) {
-        all: unset;
-      }
+    background-color: var(--theme-code-block);
+  }
 
-      article :global(pre) {
-        position: relative;
-        --padding-block: 1rem;
-        --padding-inline: 2rem;
-        padding: var(--padding-block) var(--padding-inline);
-        padding-right: calc(var(--padding-inline) * 2);
+  article :global(pre.astro-code > code) {
+    all: unset;
+  }
 
-        overflow-y: hidden;
-        overflow-x: auto;
-      }
+  article :global(pre) {
+    position: relative;
+    --padding-block: 1rem;
+    --padding-inline: 2rem;
+    padding: var(--padding-block) var(--padding-inline);
+    padding-right: calc(var(--padding-inline) * 2);
 
-      @media (min-width: 37.75em) {
-        article :global(pre) {
-          --padding-inline: 1.25rem;
-          border-radius: 8px;
-        }
-      }
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
 
-      article :global(img.cover) {
-        width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
-      }
-    </style>
-  </body>
-</html>
+  @media (min-width: 37.75em) {
+    article :global(pre) {
+      --padding-inline: 1.25rem;
+      border-radius: 8px;
+    }
+  }
+
+  article :global(img.cover) {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+  }
+</style>

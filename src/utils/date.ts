@@ -17,7 +17,7 @@ function formatUpdatedDate(date?: Date): string {
 
   const dateTimeFormat = new Intl.DateTimeFormat('en-US', {
     timeZone: 'Europe/Berlin',
-    dateStyle: 'full',
+    dateStyle: 'long',
     timeStyle: 'short'
   });
 

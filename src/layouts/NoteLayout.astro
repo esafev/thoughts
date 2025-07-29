@@ -18,18 +18,14 @@ const link = `${import.meta.env.SITE}/notes/${slug}`;
   </head>
 
   <body>
-  <Header title='↩ Index' />
-  <NoteHeader {title} {pubDate} />
+    <Header title='↩ Index' />
+    <NoteHeader {title} {pubDate} />
     <article>
       <slot />
     </article>
     <Footer />
     <style>
       /* TODO: Get rid of global using */
-      article {
-        padding-bottom: 3em;
-      }
-
       article :global(p, h2, h3) {
         margin: 1em 0 1em 0;
       }

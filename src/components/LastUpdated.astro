@@ -1,27 +1,27 @@
 ---
-let lasUpdatedDate: string;
+import { isProd } from '@/utils/misc';
+import { formatUpdatedDate } from '@/utils/date';
+
+let lastUpdatedDate: string;
 try {
-  const ghResponse = await fetch(
-    'https://api.github.com/repos/esafev/thoughts/branches/main'
-  );
-  const ghCommits = await ghResponse.json();
+  if (!isProd()) {
+    lastUpdatedDate = formatUpdatedDate(new Date());
+  } else {
+    const ghResponse = await fetch(
+      'https://api.github.com/repos/esafev/thoughts/branches/main'
+    );
+    const ghCommits = await ghResponse.json();
+    const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
 
-  const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
-  const date = new Date(lastCommitDate);
-  const dateTimeFormat = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'Europe/Berlin',
-    dateStyle: 'medium',
-    timeStyle: 'short'
-  });
-
-  lasUpdatedDate = `${dateTimeFormat.format(date)} [CET]`;
+    lastUpdatedDate = formatUpdatedDate(new Date(lastCommitDate));
+  }
 } catch {
-  lasUpdatedDate = 'unknown';
+  lastUpdatedDate = 'unknown';
 }
 
 ---
 
-<span>Last updated: {lasUpdatedDate}</span>
+<span>Last updated: {lastUpdatedDate}</span>
 
 
 <style>

@@ -8,10 +8,10 @@
     "tsc": "tsc --skipLibCheck --noEmit"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/mdx": "^4.3.3",
     "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.10.2",
+    "@astrojs/sitemap": "^3.4.2",
+    "astro": "^5.12.8",
     "sharp": "^0.34.2"
   },
   "devDependencies": {

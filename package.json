@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro sync && bun tsc && astro build",
-    "tsc": "tsc --skipLibCheck --noEmit"
+    "tsc": "tsc --skipLibCheck --noEmit",
+    "note:create": "bun scripts/create-note"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.3",
@@ -15,6 +16,7 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@types/bun": "^1.2.20",
     "typescript": "^5.9.2"
   }
 }

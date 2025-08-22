@@ -34,7 +34,7 @@
   color: var(--theme-text);
 
   font-family: "IBM Plex Mono", monospace;
-  line-height: 1.5em;
+  line-height: 1.6;
 
   hyphens: auto;
 }

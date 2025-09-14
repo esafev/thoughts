@@ -1,0 +1,4 @@
+Contact: mailto:vlad@esafev.com
+Expires: 2027-01-01T11:30:00.000Z
+Preferred-Languages: en
+Canonical: https://esafev.com/.well-known/security.txt

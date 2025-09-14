@@ -28,10 +28,10 @@ status = 301
 
 [[redirects]]
 from = "/github"
-to = "https://github.com/yourusername"
+to = "https://github.com/esafev"
 status = 301
 
 [[redirects]]
 from = "/gh"
-to = "https://github.com/yourusername"
+to = "https://github.com/esafev"
 status = 301

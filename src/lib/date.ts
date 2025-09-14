@@ -9,8 +9,6 @@ function formatDate(date?: Date, format: DateTimeFormat = 'short'): string {
     month: format
   };
 
-  console.log(options)
-
   return date.toLocaleDateString('en-US', options);
 }
 

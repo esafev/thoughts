@@ -9,6 +9,8 @@ function formatDate(date?: Date, format: DateTimeFormat = 'short'): string {
     month: format
   };
 
+  console.log(options)
+
   return date.toLocaleDateString('en-US', options);
 }
 
@@ -17,7 +19,7 @@ function formatUpdatedDate(date?: Date): string {
 
   const dateTimeFormat = new Intl.DateTimeFormat('en-US', {
     timeZone: 'Europe/Berlin',
-    dateStyle: 'long',
+    dateStyle: 'medium',
     timeStyle: 'short'
   });
 

@@ -1,6 +1,6 @@
 ---
 import type { Note } from '@/types/note';
-import { formatDate } from '@/utils/date';
+import { formatDate } from '@/lib/date';
 
 export interface Props {
   note: Note;
@@ -21,7 +21,7 @@ const {
   <h2>
     <a href={`/notes/${slug}`}>{title}</a>
   </h2>
-  <span>{formatDate(pubDate, 'long')}</span>
+  <span>{formatDate(pubDate, 'short')}</span>
 </section>
 
 <style>

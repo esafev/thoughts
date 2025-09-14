@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { experimental_AstroContainer } from "astro/container";
 import mdxRenderer from "@astrojs/mdx/server.js";
 
-import { getNotes } from "@/utils/notes";
+import { getNotes } from "@/lib/notes";
 
 const container = await experimental_AstroContainer.create();
 container.addServerRenderer({ renderer: mdxRenderer, name: 'mdx' });

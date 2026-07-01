@@ -1,3 +1,7 @@
+import type { APIRoute } from 'astro';
+
+const siteURL = 'https://esafev.com';
+
 function getTXT({ sitemapURL }: { sitemapURL: URL }) {
   const lines = [
     `User-agent: *`,
@@ -8,7 +12,7 @@ function getTXT({ sitemapURL }: { sitemapURL: URL }) {
   return lines.join('\n');
 }
 
-export function GET({ site }): Response {
-  const sitemapURL = new URL('sitemap-index.xml', site);
+export const GET: APIRoute = ({ site }) => {
+  const sitemapURL = new URL('sitemap-index.xml', site ?? siteURL);
   return new Response(getTXT({ sitemapURL }));
-}
+};

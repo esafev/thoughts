@@ -1,20 +1,23 @@
 ---
 import type { Note } from '@/types/note';
 import { formatDate } from '@/lib/date';
+import { getNoteSlug } from '@/lib/notes';
 
 export interface Props {
   note: Note;
 }
 
 const {
-  note: {
-    slug,
-    data: {
-      title,
-      pubDate
-    }
-  }
+  note,
 } = Astro.props;
+
+const {
+  data: {
+    title,
+    pubDate
+  }
+} = note;
+const slug = getNoteSlug(note);
 ---
 
 <section>

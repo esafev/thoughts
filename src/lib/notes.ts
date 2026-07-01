@@ -1,4 +1,8 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+function getNoteSlug(note: CollectionEntry<'notes'>) {
+  return note.data.slug ?? note.id;
+}
 
 async function getNotes() {
   const notes = await getCollection('notes');
@@ -11,4 +15,4 @@ async function getNotes() {
     });
 }
 
-export { getNotes };
+export { getNotes, getNoteSlug };

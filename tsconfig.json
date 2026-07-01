@@ -6,9 +6,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "types": ["vite/client", "@types/bun"],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [".astro/types.d.ts", "**/*"]

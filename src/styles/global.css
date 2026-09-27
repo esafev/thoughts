@@ -37,6 +37,7 @@
   line-height: 1.7;
 
   hyphens: auto;
+  text-wrap-style: pretty;
 }
 
 * {
@@ -76,6 +77,11 @@ body {
     --theme-text: var(--color-white-light);
     --theme-code-block: var(--color-gray);
   }
+}
+
+h2,
+h3 {
+  text-wrap-style: balance;
 }
 
 p,

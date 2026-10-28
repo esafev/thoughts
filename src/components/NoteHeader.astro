@@ -3,7 +3,7 @@ import { formatDate } from '@/lib/date';
 
 export interface Props {
   title: string;
-  pubDate: Date;
+  pubDate?: Date;
 }
 
 const { title, pubDate } = Astro.props;
@@ -11,7 +11,7 @@ const { title, pubDate } = Astro.props;
 
 <section>
   <h2>{title}</h2>
-  <span>{formatDate(pubDate, 'long')}</span>
+  {pubDate && <span>{formatDate(pubDate, 'long')}</span>}
 </section>
 
 <style>

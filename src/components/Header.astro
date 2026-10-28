@@ -24,8 +24,11 @@ const { title = 'Vlad Esafev' } = Astro.props;
     color: var(--theme-sub-text);
 
     &:hover {
-      background: none;
       color: var(--theme-sub-text);
+    }
+
+    &:focus-visible {
+      color: var(--theme-bg);
     }
   }
 </style>

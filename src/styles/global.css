@@ -7,25 +7,27 @@
 }
 
 :root {
-  --color-gray: #7c7c7a;
-  --color-gray-dark: #70706e;
-  --color-gray-bright: #898987;
-  --color-gray-medium: #e1e1e0;
-  --color-gray-light: #f9f7f4;
-  --color-black-light: #1f1f1f;
+  --color-sky: #e6effb;
+  --color-sky-medium: #d4e1f3;
+  --color-sky-gray: #526077;
+  --color-sky-ink: #142033;
+  --color-klein: #0a2675;
+  --color-klein-medium: #163488;
+  --color-klein-gray: #9fb0e0;
+  --color-klein-white: #e6ebfa;
   --color-red: #e77728;
-  --color-red-dark: #b35514;
-  --color-white: #fff;
-  --color-white-light: #cccccc;
+  --color-red-dark: #a34a0e;
+  --color-red-muted: #e8783a;
+  --color-red-light: #ffad70;
 }
 
 :root {
-  --theme-bg: var(--color-gray-light);
-  --theme-text: var(--color-black-light);
-  --theme-sub-text: var(--color-gray-dark);
-  --theme-link: var(--color-red-dark);
-  --theme-link-hover: var(--color-white);
-  --theme-code-block: var(--color-gray-medium);
+  --theme-bg: var(--color-sky);
+  --theme-text: var(--color-sky-ink);
+  --theme-sub-text: var(--color-sky-gray);
+  --theme-link-underline: var(--color-red);
+  --theme-link-hover: var(--color-red-dark);
+  --theme-code-block: var(--color-sky-medium);
 
   color-scheme: light dark;
   color: var(--theme-text);
@@ -72,12 +74,12 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme-bg: var(--color-black-light);
-    --theme-text: var(--color-white-light);
-    --theme-sub-text: var(--color-gray-bright);
-    --theme-link: var(--color-red);
-    --theme-link-hover: var(--color-black-light);
-    --theme-code-block: var(--color-gray);
+    --theme-bg: var(--color-klein);
+    --theme-text: var(--color-klein-white);
+    --theme-sub-text: var(--color-klein-gray);
+    --theme-link-underline: var(--color-red-muted);
+    --theme-link-hover: var(--color-red-light);
+    --theme-code-block: var(--color-klein-medium);
   }
 }
 
@@ -97,15 +99,31 @@ small {
 }
 
 a {
-  color: var(--theme-link);
+  color: var(--theme-text);
   font-weight: 400;
+
+  text-decoration-color: var(--theme-link-underline);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
-a:hover {
-  background-color: var(--theme-link);
-  color: var(--theme-link-hover);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--theme-link-hover);
+    text-decoration-color: currentColor;
+  }
+}
 
-  text-decoration: none !important;
+/* Transparent outline stays visible in forced-colors mode, where backgrounds are dropped */
+a:focus-visible {
+  outline: 2px solid transparent;
+  background-color: var(--theme-link-hover);
+  box-shadow: 0 0 0 2px var(--theme-link-hover);
+  color: var(--theme-bg);
+  text-decoration-color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 hr {

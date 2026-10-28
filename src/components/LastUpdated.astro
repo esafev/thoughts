@@ -1,24 +1,18 @@
 ---
-import { isProd } from '@/lib/misc';
+import { execSync } from 'node:child_process';
 import { formatUpdatedDate } from '@/lib/date';
 
+// Dependabot only touches package.json and bun.lock, so its bumps don't count as updates
 let lastUpdatedDate: string;
 try {
-  if (!isProd()) {
-    lastUpdatedDate = formatUpdatedDate(new Date());
-  } else {
-    const ghResponse = await fetch(
-      'https://api.github.com/repos/esafev/thoughts/branches/main'
-    );
-    const ghCommits = await ghResponse.json();
-    const lastCommitDate = ghCommits?.commit?.commit?.author?.date;
+  const lastCommitDate = execSync('git log -1 --format=%cI -- src public', {
+    encoding: 'utf8',
+  }).trim();
 
-    lastUpdatedDate = formatUpdatedDate(new Date(lastCommitDate));
-  }
+  lastUpdatedDate = formatUpdatedDate(new Date(lastCommitDate));
 } catch {
   lastUpdatedDate = 'unknown';
 }
-
 ---
 
 <span>Last updated: {lastUpdatedDate}</span>
@@ -27,7 +21,6 @@ try {
 <style>
   span {
     color: var(--theme-sub-text);
-    opacity: .7;
     font-size: .9em;
   }
 </style>

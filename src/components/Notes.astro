@@ -3,8 +3,40 @@ import NotePreview from '@/components/NotePreview.astro';
 import { getNotes } from '@/lib/notes';
 
 const notes = await getNotes();
+const notesByYear = Map.groupBy(notes, (note) => note.data.pubDate.getUTCFullYear());
 ---
 
-<section>
-  {notes.map((n) => <NotePreview note={n} />)}
-</section>
+<ul class="years">
+  {[...notesByYear].map(([year, yearNotes]) => (
+    <li>
+      <h3>{year}</h3>
+      <ul>
+        {yearNotes.map((n) => <NotePreview note={n} />)}
+      </ul>
+    </li>
+  ))}
+</ul>
+
+<style>
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .years > li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2ch;
+  }
+
+  .years > li:not(:first-child) {
+    margin-top: .5em;
+  }
+
+  h3 {
+    color: var(--theme-sub-text);
+
+    font-size: 1em;
+    font-weight: 400;
+  }
+</style>

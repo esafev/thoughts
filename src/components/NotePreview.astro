@@ -1,6 +1,5 @@
 ---
 import type { Note } from '@/types/note';
-import { formatDate } from '@/lib/date';
 import { getNoteSlug } from '@/lib/notes';
 
 export interface Props {
@@ -14,50 +13,21 @@ const {
 const {
   data: {
     title,
-    pubDate
   }
 } = note;
 const slug = getNoteSlug(note);
 ---
 
-<section>
-  <h2>
-    <a href={`/notes/${slug}`}>{title}</a>
-  </h2>
-  <span>{formatDate(pubDate, 'short')}</span>
-</section>
+<li>
+  <a href={`/notes/${slug}`}>{title}</a>
+</li>
 
 <style>
-  section {
-    display: flex;
-    justify-content: space-between;
+  li {
+    hyphens: manual;
   }
 
-  section span {
-    color: var(--theme-sub-text);
-    white-space: nowrap;
-  }
-
-  section h2 {
-    margin: 0 1em 0 0;
-    font-size: 1em;
-    color: var(--theme-link);
-
-    min-width: 0;
-    display: flex;
-  }
-
-  section h2 a {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  section h2:hover {
-    color: var(--theme-link-hover);
-  }
-
-  section:not(:first-child) {
+  li:not(:first-child) {
     margin-top: .5em;
   }
 </style>

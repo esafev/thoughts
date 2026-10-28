@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history for the "Last updated" date
+          fetch-depth: 0
 
       - name: Create GitHub Deployment
         id: deployment

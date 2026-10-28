@@ -8,10 +8,13 @@
 
 :root {
   --color-gray: #7c7c7a;
+  --color-gray-dark: #70706e;
+  --color-gray-bright: #898987;
   --color-gray-medium: #e1e1e0;
   --color-gray-light: #f9f7f4;
   --color-black-light: #1f1f1f;
   --color-red: #e77728;
+  --color-red-dark: #b35514;
   --color-white: #fff;
   --color-white-light: #cccccc;
 }
@@ -19,8 +22,8 @@
 :root {
   --theme-bg: var(--color-gray-light);
   --theme-text: var(--color-black-light);
-  --theme-sub-text: var(--color-gray);
-  --theme-link: var(--color-red);
+  --theme-sub-text: var(--color-gray-dark);
+  --theme-link: var(--color-red-dark);
   --theme-link-hover: var(--color-white);
   --theme-code-block: var(--color-gray-medium);
 
@@ -71,6 +74,9 @@ body {
   :root {
     --theme-bg: var(--color-black-light);
     --theme-text: var(--color-white-light);
+    --theme-sub-text: var(--color-gray-bright);
+    --theme-link: var(--color-red);
+    --theme-link-hover: var(--color-black-light);
     --theme-code-block: var(--color-gray);
   }
 }
@@ -96,7 +102,7 @@ a {
 }
 
 a:hover {
-  background-color: var(--color-red);
+  background-color: var(--theme-link);
   color: var(--theme-link-hover);
 
   text-decoration: none !important;

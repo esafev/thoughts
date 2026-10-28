@@ -14,11 +14,9 @@ const link = import.meta.env.SITE;
   title={title}
   headProps={{ description, link, title }}
 >
-  <main>
-    <Intro />
-    <h2>Recent notes:</h2>
-    <Notes />
-  </main>
+  <Intro />
+  <h2>Notes:</h2>
+  <Notes />
 
   <LastUpdated slot='footer' />
 </BaseLayout>

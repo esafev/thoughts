@@ -19,6 +19,9 @@ const { title, description, link } = Astro.props;
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+  <!-- Fonts -->
+  <link rel="preload" href="/fonts/BerkeleyMonoVariable.woff2" as="font" type="font/woff2" crossorigin />
+
   <!-- Primary Meta Tags -->
   <title>{title}</title>
   <meta name="title" content={title} />
@@ -27,6 +30,9 @@ const { title, description, link } = Astro.props;
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
 
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Vlad Esafev" href="/rss.xml" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={link} />
@@ -34,7 +40,7 @@ const { title, description, link } = Astro.props;
   <meta property="og:description" content={description} />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:card" content="summary" />
   <meta property="twitter:url" content={link} />
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />

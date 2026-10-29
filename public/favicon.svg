@@ -1,11 +1,11 @@
 <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
   <style>
     rect {
-      fill: #f9f7f4;
+      fill: #e6effb;
     }
     @media (prefers-color-scheme: dark) {
       rect {
-        fill: #1F1F1F;
+        fill: #0a2675;
       }
     }
   </style>

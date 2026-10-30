@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 import Notes from '@/components/Notes.astro';
 import Intro from '@/components/Intro.astro';
+import Footer from '@/components/Footer.astro';
 import LastUpdated from '@/components/LastUpdated.astro';
 import { SITE_TITLE } from '@/consts';
 ---
@@ -12,7 +13,9 @@ import { SITE_TITLE } from '@/consts';
   <h2>Notes:</h2>
   <Notes />
 
-  <LastUpdated slot='footer' />
+  <Footer slot='footer'>
+    <LastUpdated />
+  </Footer>
 </BaseLayout>
 
 <style>

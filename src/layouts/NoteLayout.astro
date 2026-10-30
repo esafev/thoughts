@@ -2,10 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 import NoteHeader from '@/components/NoteHeader.astro';
+import NoteNav from '@/components/NoteNav.astro';
 
 const {
   frontmatter: { title, description, pubDate, updatedDate },
   image,
+  prev,
+  next,
 } = Astro.props;
 ---
 
@@ -15,6 +18,8 @@ const {
   <article>
     <slot />
   </article>
+
+  <NoteNav {prev} {next} />
 </BaseLayout>
 
 <style>

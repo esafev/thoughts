@@ -13,3 +13,7 @@ updates:
     versioning-strategy: lockfile-only
     allow:
       - dependency-type: "direct"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"

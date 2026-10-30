@@ -1,5 +1,4 @@
 ---
-import NotePreview from '@/components/NotePreview.astro';
 import { getNotes } from '@/lib/notes';
 
 const notes = await getNotes();
@@ -11,7 +10,11 @@ const notesByYear = Map.groupBy(notes, (note) => note.data.pubDate.getUTCFullYea
     <li>
       <h3>{year}</h3>
       <ul>
-        {yearNotes.map((n) => <NotePreview note={n} />)}
+        {yearNotes.map((note) => (
+          <li>
+            <a href={`/notes/${note.id}/`}>{note.data.title}</a>
+          </li>
+        ))}
       </ul>
     </li>
   ))}
@@ -19,18 +22,17 @@ const notesByYear = Map.groupBy(notes, (note) => note.data.pubDate.getUTCFullYea
 
 <style>
   ul {
+    display: grid;
+    gap: .5em;
     padding: 0;
     list-style: none;
+    hyphens: manual;
   }
 
   .years > li {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2ch;
-  }
-
-  .years > li:not(:first-child) {
-    margin-top: .5em;
   }
 
   h3 {

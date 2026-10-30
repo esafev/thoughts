@@ -1,18 +1,11 @@
 import type { APIRoute } from 'astro';
 
-const siteURL = 'https://esafev.com';
+export const GET: APIRoute = () => {
+  const sitemapURL = new URL('sitemap-index.xml', import.meta.env.SITE);
 
-function getTXT({ sitemapURL }: { sitemapURL: URL }) {
-  const lines = [
-    `User-agent: *`,
-    `Allow: /`,
+  return new Response([
+    'User-agent: *',
+    'Allow: /',
     `Sitemap: ${sitemapURL.href}`
-  ];
-
-  return lines.join('\n');
-}
-
-export const GET: APIRoute = ({ site }) => {
-  const sitemapURL = new URL('sitemap-index.xml', site ?? siteURL);
-  return new Response(getTXT({ sitemapURL }));
+  ].join('\n'));
 };

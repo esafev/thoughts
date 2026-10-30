@@ -4,16 +4,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Notes from '@/components/Notes.astro';
 import Intro from '@/components/Intro.astro';
 import LastUpdated from '@/components/LastUpdated.astro';
-
-const title = 'Vlad Esafev';
-const description = 'Not causing trouble, not touching anything, fixing the primus';
-const link = import.meta.env.SITE;
+import { SITE_TITLE } from '@/consts';
 ---
 
-<BaseLayout
-  title={title}
-  headProps={{ description, link, title }}
->
+<BaseLayout title={SITE_TITLE}>
   <Intro />
   <h2>Notes:</h2>
   <Notes />
@@ -26,7 +20,6 @@ const link = import.meta.env.SITE;
     margin-bottom: 0.5em;
 
     color: var(--theme-sub-text);
-    text-decoration: none;
 
     font-size: 1em;
     font-weight: 400;

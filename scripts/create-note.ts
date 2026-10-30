@@ -1,49 +1,38 @@
-import { join } from 'path';
+import { join } from 'node:path';
 
 function createSlug(title: string): string {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
+    .replace(/[\s-]+/g, '-')
     .replace(/^-|-$/g, '');
 }
 
-async function createNote() {
-  const args = process.argv.slice(2);
+const [title = 'A new title', description = 'A new description'] = Bun.argv.slice(2);
+const slug = createSlug(title);
+const currentDate = new Date().toISOString().replace(/\.\d+/, '');
 
-  const title = args[0] || 'A new title';
-  const description = args[1] || 'A new description';
-  const slug = createSlug(title);
-
-  const [dateWithoutMS] = new Date().toISOString().split('.');
-  const currentDate = `${dateWithoutMS}Z`;
-
-  const frontmatter = `---
-title: ${title}
+// JSON strings are valid YAML, so a title with a colon or quotes doesn't break the frontmatter
+const frontmatter = `---
+title: ${JSON.stringify(title)}
 pubDate: ${currentDate}
-description: ${description}
+description: ${JSON.stringify(description)}
 slug: ${slug}
 published: false
 ---
 
-# Title
 ## Subtitle
 Content goes here...
 `;
 
-  const filename = `${slug}.mdx`;
-  const filepath = join(process.cwd(), 'src', 'content', 'notes', filename);
+const filename = `${slug}.mdx`;
+const filepath = join(import.meta.dir, '..', 'src', 'content', 'notes', filename);
+const file = Bun.file(filepath);
 
-  const file = Bun.file(filepath);
-  const exists = await file.exists();
-
-  if (exists) {
-    console.log('The draft note already exists, please use it');
-    return;
-  }
-
-  await Bun.write(filepath, frontmatter);
+if (await file.exists()) {
+  console.log('The draft note already exists, please use it');
+} else {
+  await file.write(frontmatter);
 
   console.log([
     `Created new post: ${filename}`,
@@ -52,5 +41,3 @@ Content goes here...
     `Published: false (change to true when ready)`
   ].join('\n'));
 }
-
-createNote();

@@ -15,7 +15,6 @@ jobs:
     permissions:
       contents: read
       deployments: write
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,7 +45,7 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: Build
         run: bun run build
@@ -83,9 +82,6 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Mark deployments as inactive
         uses: actions/github-script@v7
         with:

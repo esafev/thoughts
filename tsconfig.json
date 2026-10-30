@@ -1,14 +1,9 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "types": ["vite/client", "@types/bun"],
     "paths": {
       "@/*": ["./src/*"]
     }
-  },
-  "include": [".astro/types.d.ts", "**/*"]
+  }
 }

@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  prev?: CollectionEntry<'notes'>;
+  next?: CollectionEntry<'notes'>;
+}
+
+const { prev, next } = Astro.props;
+---
+
+<nav>
+  {prev && (
+    <a class='prev' href={`/notes/${prev.id}/`} rel='prev'>
+      <span aria-hidden='true'>←</span>
+      {prev.data.title}
+    </a>
+  )}
+  {next && (
+    <a class='next' href={`/notes/${next.id}/`} rel='next'>
+      {next.data.title}
+      <span aria-hidden='true'>→</span>
+    </a>
+  )}
+</nav>
+
+<style>
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2ch;
+
+    margin-top: 3em;
+
+    hyphens: manual;
+  }
+
+  a {
+    display: flex;
+    gap: 1ch;
+
+    text-decoration: none;
+    color: var(--theme-sub-text);
+
+    &:hover {
+      color: var(--theme-text);
+    }
+
+    &:focus-visible {
+      color: var(--theme-bg);
+    }
+  }
+
+  .prev {
+    justify-self: start;
+  }
+
+  .next {
+    grid-column: 2;
+    justify-self: end;
+    text-align: end;
+  }
+</style>

@@ -15,6 +15,6 @@ const note = Astro.props;
 const { Content } = await render(note);
 ---
 
-<NoteLayout frontmatter={note.data}>
+<NoteLayout frontmatter={note.data} image={`/og/${note.id}.png`}>
   <Content />
 </NoteLayout>

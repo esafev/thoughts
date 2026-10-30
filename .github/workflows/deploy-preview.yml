@@ -24,7 +24,7 @@ jobs:
 
       - name: Create GitHub Deployment
         id: deployment
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const deployment = await github.rest.repos.createDeployment({
@@ -60,7 +60,7 @@ jobs:
 
       - name: Update deployment status
         if: always()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const isSuccess = '${{ steps.cloudflare.outcome }}' === 'success';
@@ -83,7 +83,7 @@ jobs:
       deployments: write
     steps:
       - name: Mark deployments as inactive
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const deployments = await github.rest.repos.listDeployments({

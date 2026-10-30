@@ -7,7 +7,7 @@ import LastUpdated from '@/components/LastUpdated.astro';
 import { SITE_TITLE } from '@/consts';
 ---
 
-<BaseLayout title={SITE_TITLE}>
+<BaseLayout title={SITE_TITLE} headProps={{ image: '/og/index.png' }}>
   <Intro />
   <h2>Notes:</h2>
   <Notes />

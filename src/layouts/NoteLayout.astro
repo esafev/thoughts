@@ -5,10 +5,11 @@ import NoteHeader from '@/components/NoteHeader.astro';
 
 const {
   frontmatter: { title, description, pubDate },
+  image,
 } = Astro.props;
 ---
 
-<BaseLayout headProps={{ title, description }}>
+<BaseLayout headProps={{ title, description, image }}>
   <NoteHeader {title} {pubDate} />
 
   <article>

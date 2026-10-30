@@ -5,9 +5,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 export interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
-const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -39,7 +40,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
+  {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
 
   <!-- Twitter, falls back to Open Graph for the rest -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
 </head>

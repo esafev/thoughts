@@ -19,7 +19,6 @@ export const getStaticPaths = (async () => {
   ];
 }) satisfies GetStaticPaths;
 
-// Colors are the klein theme from global.css: a shared image can't follow the viewer's color scheme
 export const GET: APIRoute = async ({ props }) => {
   const svg = await satori(
     {

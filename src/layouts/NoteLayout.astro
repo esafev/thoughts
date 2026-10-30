@@ -4,13 +4,13 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import NoteHeader from '@/components/NoteHeader.astro';
 
 const {
-  frontmatter: { title, description, pubDate },
+  frontmatter: { title, description, pubDate, updatedDate },
   image,
 } = Astro.props;
 ---
 
 <BaseLayout headProps={{ title, description, image }}>
-  <NoteHeader {title} {pubDate} />
+  <NoteHeader {title} {pubDate} {updatedDate} />
 
   <article>
     <slot />

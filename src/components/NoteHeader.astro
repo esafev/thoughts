@@ -10,17 +10,17 @@ const { title, pubDate } = Astro.props;
 ---
 
 <section>
-  <h2>{title}</h2>
-  {pubDate && <span>{formatDate(pubDate, 'long')}</span>}
+  <h1>{title}</h1>
+  {pubDate && <span>{formatDate(pubDate)}</span>}
 </section>
 
 <style>
   section {
-    margin: 0 0 2em 0;
+    margin-block-end: 2em;
   }
 
-  section h2 {
-    margin: 1em 0 .5em;
+  section h1 {
+    margin-block: 1em .5em;
     font-size: 1.1em;
   }
 

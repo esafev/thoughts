@@ -1,19 +1,20 @@
 ---
 import '@/styles/global.css';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 
 export interface Props {
-  title: string;
-  description: string;
-  link: string;
+  title?: string;
+  description?: string;
 }
 
-const { title, description, link } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <head>
   <!-- Global Metadata -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -24,24 +25,21 @@ const { title, description, link } = Astro.props;
 
   <!-- Primary Meta Tags -->
   <title>{title}</title>
-  <meta name="title" content={title} />
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
 
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Vlad Esafev" href="/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={link} />
+  <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:url" content={link} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
+  <!-- Twitter, falls back to Open Graph for the rest -->
+  <meta name="twitter:card" content="summary" />
 </head>

@@ -3,15 +3,17 @@ export interface Props {
   title?: string;
 }
 
-const { title = 'Vlad Esafev' } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <header>
-  <h1>
-    <a href='/'>
-      {title}
-    </a>
-  </h1>
+  {title ? (
+    <h1>
+      <a href='/'>{title}</a>
+    </h1>
+  ) : (
+    <a href='/'>↩ Index</a>
+  )}
 </header>
 
 <style>

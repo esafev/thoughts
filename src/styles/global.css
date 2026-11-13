@@ -13,20 +13,16 @@
   --color-sky-ink: #142033;
   --color-klein: #0a2675;
   --color-klein-medium: #163488;
-  --color-klein-gray: #9fb0e0;
-  --color-klein-white: #e6ebfa;
-  --color-red: #e77728;
-  --color-red-dark: #a34a0e;
-  --color-red-muted: #e8783a;
-  --color-red-light: #ffad70;
+  --color-klein-light: #1f3fa3;
+  --color-klein-gray: #aaa597;
+  --color-klein-white: #ddd8cc;
 }
 
 :root {
   --theme-bg: light-dark(var(--color-sky), var(--color-klein));
   --theme-text: light-dark(var(--color-sky-ink), var(--color-klein-white));
   --theme-sub-text: light-dark(var(--color-sky-gray), var(--color-klein-gray));
-  --theme-link-underline: light-dark(var(--color-red), var(--color-red-muted));
-  --theme-link-hover: light-dark(var(--color-red-dark), var(--color-red-light));
+  --theme-link-underline: var(--theme-sub-text);
   --theme-code-block: light-dark(var(--color-sky-medium), var(--color-klein-medium));
 
   color-scheme: light dark;
@@ -39,6 +35,10 @@
 
   hyphens: auto;
   text-wrap-style: pretty;
+}
+
+::selection {
+  background-color: light-dark(var(--color-sky-medium), var(--color-klein-light));
 }
 
 * {
@@ -82,22 +82,23 @@ a {
   font-weight: 400;
 
   text-decoration-color: var(--theme-link-underline);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    color: var(--theme-link-hover);
+    color: var(--theme-text);
     text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
   }
 }
 
 /* Transparent outline stays visible in forced-colors mode, where backgrounds are dropped */
 a:focus-visible {
   outline: 2px solid transparent;
-  background-color: var(--theme-link-hover);
-  box-shadow: 0 0 0 2px var(--theme-link-hover);
+  background-color: var(--theme-text);
+  box-shadow: 0 0 0 2px var(--theme-text);
   color: var(--theme-bg);
   text-decoration-color: transparent;
 

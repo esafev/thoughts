@@ -6,6 +6,7 @@ slug: burn-your-journals-out
 published: true
 ---
 
+import DitheredImage from '@/components/DitheredImage.astro';
 import summaryLight from './assets/summary-light.webp';
 import summaryDark from './assets/summary-dark.webp';
 
@@ -26,8 +27,5 @@ So, I’ll just say one thing — take notes and re-read them often. There's a l
 Today, I bought my new dotted Moleskine.
 
 <figure>
-  <picture>
-    <source srcset={summaryDark.src} media="(prefers-color-scheme: dark)" />
-    <img src={summaryLight.src} alt="Summary of notes" width={summaryLight.width} height={summaryLight.height} />
-  </picture>
+  <DitheredImage light={summaryLight} dark={summaryDark} alt="Summary of notes" />
 </figure>

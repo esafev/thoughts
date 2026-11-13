@@ -7,5 +7,8 @@ import { SITE_URL } from "./src/consts";
 
 export default defineConfig({
   site: SITE_URL,
-  integrations: [sitemap(), mdx()]
+  integrations: [sitemap(), mdx()],
+  markdown: {
+    shikiConfig: { theme: "css-variables" }
+  }
 });

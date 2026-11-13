@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
-    "note:create": "bun scripts/create-note"
+    "note:create": "bun scripts/create-note",
+    "portrait:create": "bun scripts/create-portrait",
+    "image:dither": "bun scripts/dither-image"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.2",

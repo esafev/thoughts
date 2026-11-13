@@ -7,8 +7,9 @@ slug: art-of-possession
 published: true
 ---
 
-import { Image } from 'astro:assets';
-import myStuff from './assets/stuff.jpeg';
+import DitheredImage from '@/components/DitheredImage.astro';
+import stuffLight from './assets/stuff-light.webp';
+import stuffDark from './assets/stuff-dark.webp';
 
 This text is about my personal experience with maximalism, minimalism, and how to deal and live with it.
 
@@ -27,7 +28,7 @@ At that time I decided never to sell any of my beautiful books, but in 2022 my m
 
 ### Present: Embracing essentialism
 <figure>
-  <Image src={myStuff} alt="All my stuff" width="1200" />
+  <DitheredImage light={stuffLight} dark={stuffDark} alt="All my stuff" />
   <figcaption> > Ready: now all my stuff fits into a suitcase and a Japanese daypack, but why?</figcaption>
 </figure>
 

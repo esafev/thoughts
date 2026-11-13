@@ -6,8 +6,8 @@ slug: burn-your-journals-out
 published: true
 ---
 
-import { Image } from 'astro:assets';
-import summary from './assets/summary.jpeg';
+import summaryLight from './assets/summary-light.webp';
+import summaryDark from './assets/summary-dark.webp';
 
 In September 2021, I bought my next Moleskine with the promise that I would regularly fill it with my thoughts.
 
@@ -26,5 +26,8 @@ So, I’ll just say one thing — take notes and re-read them often. There's a l
 Today, I bought my new dotted Moleskine.
 
 <figure>
-  <Image src={summary} alt="Summary of notes" width="1200" />
+  <picture>
+    <source srcset={summaryDark.src} media="(prefers-color-scheme: dark)" />
+    <img src={summaryLight.src} alt="Summary of notes" width={summaryLight.width} height={summaryLight.height} />
+  </picture>
 </figure>

@@ -1,0 +1,28 @@
+---
+import { SITE_TITLE } from '@/consts';
+---
+
+<a href='/'>
+  <picture>
+    <source srcset='/portrait-dark.webp' media='(prefers-color-scheme: dark)' />
+    <img src='/portrait-light.webp' alt={SITE_TITLE} width='96' height='96' />
+  </picture>
+</a>
+
+<style>
+  a {
+    display: inline-block;
+    vertical-align: top;
+
+    &:focus-visible {
+      background: none;
+      box-shadow: none;
+      outline: 2px solid var(--theme-link-hover);
+      outline-offset: 4px;
+    }
+  }
+
+  img {
+    display: block;
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+title: Progressive animations
+pubDate: 2026-11-13T20:00:00Z
+description: Animations teach, then they cost time
+slug: progressive-animations
+published: true
+---
+
+Animations help new users. Motion shows what changed and makes a new interface easier to learn. But once the user knows the interface, the same animation just takes time on every action.
+
+What if interfaces removed most of their animations after the user has learned them?
+
+This idea has a name: [progressive reduction](https://layervault.tumblr.com/post/42361566927/progressive-reduction). You start with a rich, guided interface and simplify it as the user gains experience. Games do this with tutorials: the first level explains everything, and later you just play.
+
+[Emil Kowalski](https://animations.dev/) made a related point recently: before choosing an easing or a duration, ask how often someone will see the animation. A command menu opened a hundred times a day shouldn't animate at all, while onboarding can afford some delight. His axis is frequency, mine is experience - a frequent animation should never play, and a familiar one should stop taking your time.
+
+But animations don't only teach. They also show that something changed and where it went. Remove them all and a fast UI can feel broken: states jump around, and you're not sure the app responded at all.
+
+So maybe the end state isn't zero animations, but faster ones. A 150ms fade instead of a 500ms slide. Enough to follow what happened, short enough to never wait.
+
+I haven't built this yet, but I keep thinking about a switch: not "reduce motion" for accessibility, but "I've learned this app, give me the fast version."

@@ -1,6 +1,12 @@
+---
+import { LINKS } from '@/consts';
+---
+
 <footer>
   <span>
-    [↗]: <a target='_blank' rel='me' href='mailto:vlad@esafev.com'>Email</a>, <a target='_blank' rel='me' href='https://are.na/ve'>Are.na</a>, <a target='_blank' rel='me' href='https://github.com/esafev'>GitHub</a>, <a target='_blank' rel='me' href='https://bsky.app/profile/esafev.com'>Bluesky</a>, <a target='_blank' rel='me' href='https://x.com/vladesafev'>X</a>, <a target='_blank' href='/rss.xml'>RSS</a>
+    [↗]: {LINKS.map(({ label, href }) => (
+      <><a target='_blank' rel='me' href={href}>{label}</a>, </>
+    ))}<a target='_blank' href='/rss.xml'>RSS</a>
   </span>
 </footer>
 

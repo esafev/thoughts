@@ -1,6 +1,6 @@
 ---
 import Portrait from '@/components/Portrait.astro';
-import { SITE_TITLE } from '@/consts';
+import { PORTRAIT, SITE_TITLE } from '@/consts';
 
 export interface Props {
   title?: string;
@@ -12,7 +12,7 @@ const { title } = Astro.props;
 <header>
   {title ? (
     <h1>
-      {title === SITE_TITLE ? <Portrait /> : <a href='/'>{title}</a>}
+      {title === SITE_TITLE && PORTRAIT ? <Portrait {...PORTRAIT} /> : <a href='/'>{title}</a>}
     </h1>
   ) : (
     <a href='/'>↩ Index</a>

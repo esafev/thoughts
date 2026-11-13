@@ -1,11 +1,18 @@
 ---
 import { SITE_TITLE } from '@/consts';
+
+export interface Props {
+  light: string;
+  dark?: string;
+}
+
+const { light, dark } = Astro.props;
 ---
 
 <a href='/'>
   <picture>
-    <source srcset='/portrait-dark.webp' media='(prefers-color-scheme: dark)' />
-    <img src='/portrait-light.webp' alt={SITE_TITLE} width='96' height='96' />
+    {dark && <source srcset={dark} media='(prefers-color-scheme: dark)' />}
+    <img src={light} alt={SITE_TITLE} width='96' height='96' />
   </picture>
 </a>
 

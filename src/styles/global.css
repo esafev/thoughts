@@ -41,6 +41,11 @@
   background-color: light-dark(var(--color-sky-medium), var(--color-klein-light));
 }
 
+code::selection,
+code ::selection {
+  background-color: var(--theme-bg);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -67,7 +72,7 @@ body {
 @media (width <= 480px) {
   body {
     max-width: 100%;
-    padding: 1em;
+    padding: 3em 1em 1em;
   }
 }
 

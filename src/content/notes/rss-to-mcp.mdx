@@ -1,0 +1,65 @@
+---
+title: RSS → MCP
+pubDate: 2026-11-14T10:00:00Z
+description: How the two standards can work together
+slug: rss-to-mcp
+published: true
+---
+
+RSS answers one question: what's new? Agents ask other questions, so they scrape your pages and retell your work in their own words.
+
+What if every personal site had its own MCP? Instead of just scraping HTML, an agent could ask the site directly and get back what the author actually wrote. RSS pushes what I published. MCP lets you ask about it.
+
+### The page
+
+[WebMCP](https://github.com/webmachinelearning/webmcp) is an early proposal for this. A page registers its own tools, and the agent calls them instead of guessing from the DOM.
+
+```js
+await document.modelContext.registerTool({
+  name: "about",
+  description: "Who I am and what this site is",
+  execute() {
+    return "Vlad's notes on engineering and life";
+  }
+});
+
+await document.modelContext.registerTool({
+  name: "ask",
+  description: "Ask a question, answered from my notes",
+  inputSchema: {
+    type: "object",
+    properties: { question: { type: "string" } },
+    required: ["question"]
+  },
+  execute({ question }) {
+    return answerFromNotes(question);
+  }
+});
+
+await document.modelContext.registerTool({
+  name: "subscribe",
+  description: "Get new notes as they come out",
+  execute() {
+    // RSS feed, email newsletter, push notifications, etc.
+    return "[https://esafev.com/rss.xml](https://esafev.com/rss.xml)";
+  }
+});
+```
+
+### The feed
+
+RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, and the feed itself can list my MCP tools. RSS is already extensible through XML namespaces (that's how podcast feeds added chapters and transcripts).
+
+```xml
+<channel xmlns:mcp="[https://esafev.com/ns/mcp](https://esafev.com/ns/mcp)">
+  <title>Vlad Esafev</title>
+  <mcp:tool name="about">Who I am and what this site is</mcp:tool>
+  <mcp:tool name="ask">Ask a question, answered from my notes</mcp:tool>
+</channel>
+```
+
+### The standard
+
+RSS worked because every feed had the same structure, so one reader could follow any site. Agents don't strictly need that, since they can figure out any tool from its description. But feed readers do. If `ask` meant the same thing everywhere, your reader could add an "Ask" box to every blog you follow.
+
+The [IndieWeb](https://indieweb.org/) already agreed on Webmention and microformats. Could we agree on a few standard tools, too?

@@ -25,7 +25,7 @@ await document.modelContext.registerTool({
 
 await document.modelContext.registerTool({
   name: "ask",
-  description: "Ask a question, answered from my notes",
+  description: "Answered from my notes",
   inputSchema: {
     type: "object",
     properties: { question: { type: "string" } },
@@ -41,7 +41,7 @@ await document.modelContext.registerTool({
   description: "Get new notes as they come out",
   execute() {
     // RSS feed, email newsletter, push notifications, etc.
-    return "[https://esafev.com/rss.xml](https://esafev.com/rss.xml)";
+    return "https://esafev.com/rss.xml";
   }
 });
 ```
@@ -54,7 +54,7 @@ RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, a
 <channel xmlns:mcp="https://esafev.com/ns/mcp">
   <title>Vlad Esafev</title>
   <mcp:tool name="about">Who I am and what this site is</mcp:tool>
-  <mcp:tool name="ask">Ask a question, answered from my notes</mcp:tool>
+  <mcp:tool name="ask">Answered from my notes</mcp:tool>
 </channel>
 ```
 

@@ -90,6 +90,11 @@ const {
       overflow: auto hidden;
 
       font-family: inherit;
+
+      @media (width <= 480px) {
+        --padding-inline: 1em;
+        padding-block: 1em;
+      }
     }
 
     :global(pre > code) {

@@ -41,7 +41,7 @@ await document.modelContext.registerTool({
   description: "Get new notes as they come out",
   execute() {
     // RSS feed, email newsletter, push notifications, etc.
-    return "https://esafev.com/rss.xml";
+    return "[https://esafev.com/rss.xml](https://esafev.com/rss.xml)";
   }
 });
 ```
@@ -51,15 +51,15 @@ await document.modelContext.registerTool({
 RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, and the feed itself can list my MCP tools. RSS is already extensible through XML namespaces (that's how podcast feeds added chapters and transcripts).
 
 ```xml
-<channel xmlns:mcp="https://esafev.com/ns/mcp">
+<channel xmlns:mcp="[https://esafev.com/ns/mcp](https://esafev.com/ns/mcp)">
   <title>Vlad Esafev</title>
   <mcp:tool name="about">Who I am and what this site is</mcp:tool>
-  <mcp:tool name="ask">Answered from my notes</mcp:tool>
+  <mcp:tool name="ask">Ask a question, answered from my notes</mcp:tool>
 </channel>
 ```
 
-### The tools need one shape
+### The tools need one structure
 
-RSS worked because every feed had the same shape, so any reader could parse any site. An agent can read any tool's description and figure it out - a feed reader can't. If `ask` meant the same thing on every site, your reader could show an "Ask" box for every blog you follow. The [IndieWeb](https://indieweb.org/) community already figured out shared conventions with Webmention and microformats.
+RSS worked because every feed had the same structure, so any reader could parse any site. An agent can read any tool's description and figure it out, but a feed reader can't. If `ask` meant the same thing on every site, your reader could show an "Ask" box for every blog you follow. The [IndieWeb](https://indieweb.org/) community already figured out shared conventions with Webmention and microformats.
 
 Could we agree on a few standard tools, too?

@@ -10,7 +10,7 @@ RSS answers one question: what's new? Agents ask other questions, so they scrape
 
 What if every personal site had its own MCP? Instead of just scraping HTML, an agent could ask the site directly and get back what the author actually wrote. RSS pushes what I published. MCP lets you ask about it.
 
-### The site answers
+### The page
 
 [WebMCP](https://github.com/webmachinelearning/webmcp) is an early proposal for this. A page registers its own tools, and the agent calls them instead of guessing from the DOM.
 
@@ -46,7 +46,7 @@ await document.modelContext.registerTool({
 });
 ```
 
-### The feed points to the tools
+### The feed
 
 RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, and the feed itself can list my MCP tools. RSS is already extensible through XML namespaces (that's how podcast feeds added chapters and transcripts).
 
@@ -58,8 +58,8 @@ RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, a
 </channel>
 ```
 
-### The tools need one structure
+### The standard
 
-RSS worked because every feed had the same structure, so any reader could parse any site. An agent can read any tool's description and figure it out, but a feed reader can't. If `ask` meant the same thing on every site, your reader could show an "Ask" box for every blog you follow. The [IndieWeb](https://indieweb.org/) community already figured out shared conventions with Webmention and microformats.
+RSS worked because every feed had the same structure, so one reader could follow any site. Agents don't strictly need that, since they can figure out any tool from its description. But feed readers do. If `ask` meant the same thing everywhere, your reader could add an "Ask" box to every blog you follow.
 
-Could we agree on a few standard tools, too?
+The [IndieWeb](https://indieweb.org/) already agreed on Webmention and microformats. Could we agree on a few standard tools, too?

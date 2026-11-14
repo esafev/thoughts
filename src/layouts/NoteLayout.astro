@@ -40,6 +40,10 @@ const {
       margin-block: 1em;
     }
 
+    :global(h2, h3) {
+      margin-block-start: 2em;
+    }
+
     :global(h2) {
       font-size: 1.3em;
     }
@@ -70,8 +74,8 @@ const {
     :global(code) {
       padding: 0.2rem 0.33rem;
       margin-inline: -0.125em;
-      border-radius: 3px;
 
+      font-family: inherit;
       font-size: 0.85em;
       overflow-wrap: anywhere;
 
@@ -79,19 +83,21 @@ const {
     }
 
     :global(pre) {
-      --padding-inline: 2rem;
-      padding: 1rem var(--padding-inline);
+      --padding-inline: 1.25rem;
+      margin-block: 1.5em;
+      padding: 1.25rem var(--padding-inline);
       padding-inline-end: calc(var(--padding-inline) * 2);
       overflow: auto hidden;
 
-      @media (width >= 37.75em) {
-        --padding-inline: 1.25rem;
-        border-radius: 8px;
-      }
+      font-family: inherit;
     }
 
     :global(pre > code) {
       all: unset;
+
+      @media (width <= 480px) {
+        font-size: 0.9em;
+      }
     }
   }
 </style>

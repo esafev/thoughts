@@ -15,7 +15,7 @@ const { title } = Astro.props;
       {title === SITE_TITLE && PORTRAIT ? <Portrait {...PORTRAIT} /> : <a href='/'>{title}</a>}
     </h1>
   ) : (
-    <a href='/'>↩ Index</a>
+    <a class='back' href='/'><span aria-hidden='true'>↩</span>Index</a>
   )}
 </header>
 
@@ -25,7 +25,6 @@ const { title } = Astro.props;
   }
 
   a {
-    text-decoration: none;
     color: var(--theme-sub-text);
 
     &:hover {
@@ -35,5 +34,14 @@ const { title } = Astro.props;
     &:focus-visible {
       color: var(--theme-bg);
     }
+  }
+
+  h1 a {
+    text-decoration: none;
+  }
+
+  .back span {
+    display: inline-block;
+    margin-inline-end: 1ch;
   }
 </style>

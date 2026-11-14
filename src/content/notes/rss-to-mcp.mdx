@@ -51,7 +51,7 @@ await document.modelContext.registerTool({
 RSS and MCP can point to each other. The `subscribe` tool returns my RSS feed, and the feed itself can list my MCP tools. RSS is already extensible through XML namespaces (that's how podcast feeds added chapters and transcripts).
 
 ```xml
-<channel xmlns:mcp="[https://esafev.com/ns/mcp](https://esafev.com/ns/mcp)">
+<channel xmlns:mcp="https://esafev.com/ns/mcp">
   <title>Vlad Esafev</title>
   <mcp:tool name="about">Who I am and what this site is</mcp:tool>
   <mcp:tool name="ask">Ask a question, answered from my notes</mcp:tool>

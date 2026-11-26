@@ -39,7 +39,7 @@ export const GET: APIRoute = async ({ props }) => {
         },
         children: [
           { type: 'div', props: { style: { fontSize: 64, lineHeight: 1.25 }, children: props.title } },
-          { type: 'div', props: { style: { fontSize: 28, color: '#aaa597' }, children: SITE_TITLE } },
+          { type: 'div', props: { style: { fontSize: 28, color: '#9da6b7' }, children: SITE_TITLE } },
         ],
       },
     },

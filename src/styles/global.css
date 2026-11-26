@@ -14,7 +14,7 @@
   --color-klein: #0a2675;
   --color-klein-medium: #163488;
   --color-klein-light: #1f3fa3;
-  --color-klein-gray: #aaa597;
+  --color-klein-gray: #9da6b7;
   --color-klein-white: #ddd8cc;
 }
 
@@ -55,10 +55,30 @@ code ::selection {
   navigation: auto;
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.25s;
-  animation-timing-function: ease;
+@keyframes dither-in {
+  0% {
+    mask-image: conic-gradient(#000 25%, #0000 0);
+  }
+
+  33% {
+    mask-image: repeating-conic-gradient(#000 0 25%, #0000 0 50%);
+  }
+
+  67% {
+    mask-image: conic-gradient(#000 25%, #0000 0 50%, #000 0);
+  }
+}
+
+@media not (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root) {
+    animation: none;
+  }
+
+  ::view-transition-new(root) {
+    mix-blend-mode: normal;
+    mask-size: 2px 2px;
+    animation: 0.18s step-end dither-in;
+  }
 }
 
 body {
